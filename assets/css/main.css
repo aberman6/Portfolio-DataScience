@@ -27,6 +27,11 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
 
+figcaption {
+  font-size: 80%;
+  font-style: italic;
+  padding: 2em 0.5em 2em 0.5em; }
+
 body {
   line-height: 1; }
 
@@ -1220,7 +1225,7 @@ input[type="radio"] + label:before {
     border-radius: 0.375em;
     display: block; }
   .image.left, .image.right {
-    max-width: 40%; }
+    max-width: 50%; }
     .image.left img, .image.right img {
       width: 100%; }
   .image.left {
