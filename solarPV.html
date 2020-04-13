@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Anna Berman</title>
@@ -33,13 +28,12 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>Detecting Solar PV Through Supervised Learning</h1>
-										<p>Convolutional Neural Networks handle pixels in context making them an ideal choice for image recognition.</p>
-									
+										<h1>Detecting Solar Panels From Satellite Imagery</h1>
+										<p>Convolutional Neural Networks handle pixels in context making them an ideal choice for image recognition.</p>									
 									</header>
-
 									<p>Contributors to this project include <a href='https://www.linkedin.com/in/viggy-kumaresan/'>Viggy Kumaresan</a>, <a href='https://www.linkedin.com/in/azucenamv/?locale=en_US'>Azucena Morales</a>, <a href='https://www.linkedin.com/in/yifei-wang-0249b5170/'>Yifei Wang</a>, and <a href='https://www.linkedin.com/in/zhaosicong/'>Sicong Zhao</a>.</p>
 									<span class="image main"><img src="images/solarPV-cover.png" alt="" /></span>
+									
 									<!-- Intro -->
 									<h2>Why bother with solar panel detection?</h2>
 									<p>Solar power currently accounts for 1% of the world’s electricity generation. In fact, estimates of solar energy production predict a potential 65-fold growth by 2050, eventually making solar power one of the largest sources of energy across the globe <a href="#reference1">[1]</a>. Solar photovoltaic, or solar PV, power installed on top of rooftops is estimated to make up 30% of this energy generation. In recent years, solar PV power has already begun playing an increasingly large role in US electricity generation. From 2008 through 2017, there was a 39-fold growth in annual solar generation representing an increase of 75,123 GWh <a href="#reference2">[2]</a>.</p>
@@ -47,41 +41,44 @@
 									<p>Traditional data sources such as consumer surveys and market research, are costly and time-consuming to collect, and ultimately can often only give a partial or biased view of the market. Satellite imagery, on the other hand, allows us to see overhead views of households all over the country and does not rely on self-reported data. The use of aerial imagery to for solar PV detection may result in more consistent and cost-effective assessment of solar adoption.</p>
 									
                                     <!-- Previous Research -->
-									<h2>Previous Research</h2>
-									<p>Previous studies have explored the use of machine learning for satellite image classification with high rates of accuracy of detection with a low rate of incorrect classification <a href="#reference7">[7,</a><a href="#reference8"> 8]</a>. Specifically, random forest classification and CNN approaches have been shown to accurately measure size, shape and capacity of solar PV from satellite imagery <a href="#reference9">[9,</a><a href="#reference10"> 10,</a><a href="#reference11"> 11]</a>.</p>
-									<p>However, to implement approaches like these, as with any supervised learning approach, a training set of data with labelled classes is required in order to both model the data as well as evaluate performance.Unfortunately, the number of available labelled datasets containing satellite imagery of solar PV is limited. An example of such a dataset is the Distributed Solar Photovoltaic Array Location and Extent Dataset containing geospatial coordinates and border vertices for over 19,000 solar panels across 601 high-resolution images from four cities in California<a href="#reference12"> [12]</a>.</p>
+									<h3>Previous Research</h3>
+									<p>Previous studies have explored the use of machine learning for satellite image classification with high rates of accuracy of detection with a low rate of incorrect classification <a href="#reference7">[7,</a><a href="#reference8"> 8]</a>. Specifically, random forest classification and CNN approaches have been shown to accurately measure size, shape and capacity of solar PV from satellite imagery <a href="#reference9">[9,</a><a href="#reference10"> 10,</a><a href="#reference11"> 11]</a>. However, to implement approaches like these, as with any supervised learning approach, a training set of data with labelled classes is required in order to both model the data as well as evaluate performance.Unfortunately, the number of available labelled datasets containing satellite imagery of solar PV is limited. An example of such a dataset is the Distributed Solar Photovoltaic Array Location and Extent Dataset containing geospatial coordinates and border vertices for over 19,000 solar panels across 601 high-resolution images from four cities in California<a href="#reference12"> [12]</a>.</p>
 
 									<!-- Data Sources -->
 									<hr class="major" />
-									<div class="row">
-										<div class="col-6 col-12-small">
-											<h2>Data Sources</h2>
-											<p>Our dataset consists of 1,500 satellite images in TIFF format, each image contains a 101 pixels x 101 pixels size and has three color channels (Red, Green, Blue). In total, each image is represented as 101 x 101 x 3 array, which is a total of 30,603 numerical entries with values ranging from 0 and 255.</p>
-											<p>Each image in our dataset has been labeled as one of two classes, either containing a solar PV, or not containing a solar PV. The labels for this dataset were created by human observers who visually scanned the imagery and and annotated all of the visible solar PV. There are 555 images that contains a solar PV and 995 images without a solar PV, which means that the classes in our dataset were not entirely equally balanced. An additional 558 number of images and labels were housed on Kaggle.com. These images were used as a test set during our model selection process.</p>
-
-										</div>
-										<div class="col-6 col-12-small">
-											<h4>Images Containing Solar PV</h4>
-											<span class="image fit"><img src="images/solarPV-PV.png" alt="" /></span>
-											<h4>Images Not Containing Solar PV</h4>
-											<span class="image fit"><img src="images/solarPV-PVno.png" alt="" /></span>
-										</div>
-									</div>
-									<p>Unfortunately, the images of the solar PV included do not necessarily share standard form. In general, solar PV instances come in a variety of sizes and colors and are not always at the center of the image. However, many solar panels tend to be rectangle with sharp angles and edges. Additionally, the surrounding landscape in images of both classes is also far from standardized. Examples of rooftops, pavement, grass, and residential pools can be seen in both classes. In order for ant model to be successful, this large amount of diversity needs to be addressed. Additionally, a model should predict the a consistent class regardless of orientation of each image. Therefore, rotation and scaling of images should be tolerated in our final model.</p>
+									<h2>Data Sources</h2>
+									<span class="image right">
+										<h5>Images Containing Solar PV</h5>
+										<img src="images/solarPV-PV.png" alt="" />
+										<figcaption>Solar PV instances varied in size and color, but shared similar shapes.</figcaption>
+										<h5>Images Not Containing Solar PV</h5>
+										<img src="images/solarPV-PVno.png" alt="" />
+										<figcaption>Surrounding landscape was similar across both images with and without solar PV.</figcaption>
+									</span>
+									<p>The primary dataset contains 1,500 satellite images in TIFF format, with each image consisting of 101 pixels x 101 pixels and three color channels (Red, Green, Blue). In total, each image is represented as 101 x 101 x 3 array, which is a total of 30,603 numerical entries with values ranging from 0 and 255.</p>
+									<p>Each image in the dataset has been labeled as one of two classes, either containing a solar PV, or not containing a solar PV. The labels were created by human observers who visually scanned the imagery and annotated all of the visible solar PV. There are 555 images that contains a solar PV and 995 images without a solar PV, which means that the classes are not entirely balanced. An additional 558 labeled images are housed on Kaggle.com. These images were used as a test set during the model selection process.</p>
+									<p>Looking at the images themselves, many instances of solar panels tend to be rectangle with sharp angles and edges. That said, the full images containing solar PV do not always share a standard form. Images come in a variety of sizes and colors and the solar panels are not always at the center of the image. Moreover, the surrounding landscape in images of both classes is also far from standardized. Examples of rooftops, pavement, grass, and residential pools can be seen in both classes. In order for any model to be successful, this lack of standardization needs to be addressed. Additionally, a model should predict the a consistent class regardless of orientation of each image. In other words, rotation and scaling of images should be tolerated in the final model.</p>
 
 									<!-- Methods -->
 									<hr class="major" />
 									<h2>Methods</h2>
-									<span class="image right"><img src="images/solarPV-flowchart.png" alt="" /></span>
+									<span class="image right" style="max-width: 35%;">
+										<h5 style="text-align: center;">Analysis Workflow</h5>
+										<img src="images/solarPV-flowchart.png" alt="" />
+									</span>
 									
 									<h4>Train-Test Split</h4>
-									<p>Out of the original 1,500 images, we split created a 80-20 training-test split. When partitioning the data, we ensured a ratio of classes proportional to the original dataset in both our training and validation sets.</p>
+									<p>A 80-20 training-test split was used. When partitioning the data, a ratio of classes proportional to the original dataset in both training and validation sets.</p>
 									
 									<h4>Data Preprocessing</h4>
-									<p>When preprocessing our data, we prepared our images in three main steps. In the first step of preprocessing, we rescaled the RGB values of our images to be in the range of 0 and 1 in order to avoid having high values compared to a typical learning rate <a href="#reference13"> [13]</a>.</p>
-									<p>During the second step of preprocessing, we applied a series of random modifications to our data in order to prevent overfitting of our model. Specifically, we applied horizontal flips, image shears, and random zoom. By increasing the diversity of images in our training set we hoped to reduce overfit and ultimately to increase predictive accuracy outside our current dataset <a href="#reference13"> [13,</a><a href="#reference14"> 14,</a><a href="#reference15"> 15]</a>.</p>
-									<p>Finally, we added lumiance and gradient features to each of our images in the hopes of creating a clearer delineation between our two image classes <a href="#reference16">[16]</a>. We created these features based on properties we know to be true of solar panel, they absorb light and they are angular in shape. By adding features around these two traits, we hoped to increase the accuracy of our predictions.</p>
-									<span class="image fit"><img src="images/solarPV-features.png" alt="" /></span>
+									<p>Data preprocessing took three general steps. In the first step of preprocessing, RGB values were rescaled to be between 0 and 1 in order to avoid high values compared to a typical learning rate <a href="#reference13"> [13]</a>.</p>
+									<p>During the second step of preprocessing, random modifications were applied to images in order to prevent overfitting including horizontal flips, image shears, and zooms. By increasing the diversity of images in the training set we can ideally to reduce overfit and ultimately increase out-of-sample accuracy <a href="#reference13"> [13,</a><a href="#reference14"> 14,</a><a href="#reference15"> 15]</a>.</p>
+									<p>Finally, lumiansce and gradient features were added to each images. These features were selected based on properties we know to be true of solar panels, they absorb light and they are angular in shape. By adding these two features, we hoped to increase prediction accuracy <a href="#reference16">[16]</a>.</p>
+									<span class="image left" style="max-width: 65%;">
+										<img src="images/solarPV-features.png" alt="" />
+										<figcaption>Example effect of relative luminance and gradient channels. Additional features hopefully help delineate between images with and without solar PV by making the differences between classes more salient.</figcaption>
+									</span>
+
 									<h4>Convolutional Neural Networks (CNN)</h4>
 									<p>CNN are a type of neural network for processing data that has a grid-like topology. CNNs are widely known in computer vision for being successful for tasks such as classifying images, clustering images, and object recognition <a href="#reference17">[17]</a>. At they’re core, CNNs use the convolution operation, instead of matrix multiplication in at least one of their layers. As other neural networks, they are conformed by a sequence of layers. The layers of CNN have neurons arranged in three dimensions: width, height and depth. There are different type of CNN architectures, but there are main type of layers <a href="#reference18">[18,</a><a href="#reference19"> 19]</a></p>
 									<ol>
@@ -91,13 +88,15 @@
 										<li><b>Flatten:</b> This layer flattens the pooled feature map into a column</li>
 										<li><b>Full-Connection:</b> The layer will compute the class scores, each neuron in this layer will be connected to all the neurons in the previous one.</li>
 									</ol>
-									<span class="image fit"><img src="images/solarPV-cnn.png" alt="" /></span>
-									<p><i>The convolutional layer applies a convolution operation, the output is passed to the next layer. The pool layer performs a down sampling operation by combining the outputs of neurons at one layer into a single neuron in the next layer. The flatten reshapes the feature map into a column. The full-connection layer will compute the class scores, each neuron in this layer will be connected to all the neurons in the previous one <a href="#reference20">[20]</a>.</i></p>
+									<span class="image fit">
+										<img src="images/solarPV-cnn.png" alt="" />
+										<figcaption>The convolutional layer applies a convolution operation, the output is passed to the next layer. The pool layer performs a down sampling operation by combining the outputs of neurons at one layer into a single neuron in the next layer. The flatten reshapes the feature map into a column. The full-connection layer will compute the class scores, each neuron in this layer will be connected to all the neurons in the previous one <a href="#reference20">[20]</a>.</figcaption>
+									</span>
 									
 									<!-- Results -->
 									<hr class="major" />
 									<h2>Results</h2>
-									<p>Comparing a variety of modeling approached, we found CNN to be the strongest approach. A KNN classifier and a gaussian naive bayes model performed rather similarly to each other with AUCs of 0.639 and 0.643 respectively. A simple logistic regression was able to achieve a surpriseing 0.785 AUC. Random forest modeling performed even stronger with and AUC of 0.824. Finally, our CNN resulted in validation accuracy of 0.957. Although AUC and validation accuracy are not measured on the same scale, the results suggest our CNN model produces meaningful improvement in accuracy.</p>
+									<p>Compared to a variety of modeling approaches, a CNN approached proved to be the strongest. KNN classification and gaussian naive bayes modeling performed comparably to each other with AUCs of 0.639 and 0.643 respectively. Logistic regression was able to achieve a surpriseing 0.785 AUC. Random forest modeling performed even stronger with and AUC of 0.824. Finally, CNN resulted in validation accuracy of 0.957. Although AUC and validation accuracy are not measured on the same scale, the results suggest the CNN model shows a meaningful improvement in accuracy.</p>
 									<h4>Model Accuracy</h4>
 									<div class="table-wrapper">
 										<table>
@@ -142,48 +141,55 @@
 											</tbody>
 										</table>
 									</div>
-									<p>Interestingly, we also found that the addition of a gradient channel increased the accuracy of many of our models.</p>
+									<p>The addition of a gradient channel increased the accuracy of many models techniques.</p>
+									
 									<div class="row">
 										<div class="col-6 col-12-small">
-											<h4>Logistic Regression Performance by Proprocessing Method</h4>
-											<span class="image fit"><img src="images/solarPV-logit.png" alt="" /></span>
+											<span class="image fit">
+												<h4>Logistic Regression Performance by Proprocessing Method</h4>
+												<img src="images/solarPV-logit.png" alt="" />
+												<figcaption>Adding a gradient feature increases model performances across the entire range of PCA values. Adding a relative luminance features shows little impact. The optimal choice of PCA components is approximately 225.</figcaption>
+											</span>
 										</div>
 										<div class="col-6 col-12-small">
-											<h4>Random Forest Performance by Proprocessing Method</h4>
-											<span class="image fit"><img src="images/solarPV-randomforest.png" alt="" /></span>
+											<span class="image fit">
+												<h4>Random Forest Performance by Proprocessing Method</h4>
+												<img src="images/solarPV-randomforest.png" alt="" />
+												<figcaption>Adding a gradient feature increased model performances across the entire range of number of trees. Adding a relative luminance feature might sometimes hurt the performance. The optimal choice of tree number is approximately 300.</figcaption>
+											</span>
 										</div>
 									</div>
 
 									<!-- Conclusion -->
 									<hr class="major" />
-									<h2>Conclusion</h2>
-									<p>Our findings align with previous research and suggest that approaches such as traditional logistic regression, k-nearest neighbors, and gaussian naive bayes may not be sufficient for identification with high rates of accuracy. That said, by adding additional features, such as image gradients, performance can be improved even when using simplest models.</p>
-									<p>Our findings suggest a CNN approach produces the highest accuracy of detection. Instead of handling each pixel as features individually, CNN essentially looks at pixels in context. This type of approach is ideal when considering image recognition analysis because pixels only have meaning in relation to surrounding pixels. Given algorithm behind CNNs in without results, CNN or similar neural network approaches appear to be a feasible and strong choice for similar image detection analyses.</p>
-									<p>In comparison to previous research on supervised learning and solar PV detection, this analysis was rather small. Our dataset contained only 1,500 images compared to others with almost double the sample size <a href="#reference9">[9]</a>. By increasing our training data size, we would be able to improve our model and improve its generalizability to other satellite images. Also, additional approaches could yield increased accuracy, such as transferring learning from pre-built models. Future research should also examine the use of supervised learning techniques to not only identify the existence or absence of solar PV, but also estimate the energy consumption associated with each installation. This could be achieved by integrating other disparate data sources, such as geographic data and energy usage patterns.</p>
+									<h2>Final Thoughts</h2>
+									<p>These results align with previous research suggesting that approaches such as logistic regression, k-nearest neighbors, and gaussian naive bayes may not be sufficient for identification with high rates of accuracy. That said, by adding features such as image gradients, performance can be improved even when using simple models such as logistic regression.</p>
+									<p>Moreover, these results suggest a CNN approach produces the highest accuracy of detection. Instead of handling each pixel as features individually, CNN essentially looks at pixels in context. This type of approach is ideal when considering image recognition analysis because pixels only have meaning in relation to surrounding pixels. CNN or similar neural network approaches appear to be a feasible and strong choice for similar image detection analyses.</p>
+									<p>In comparison to previous research on supervised learning and solar PV detection, this analysis was rather small. Our training and testing dataset was only half the size of similar studies <a href="#reference9">[9]</a>. By increasing the size of the training data, model accuracy may be improved. Also, additional approaches could yield increased accuracy, such as transferring learning from pre-built models. Future research should also examine the use of supervised learning techniques to not only identify the existence or absence of solar PV, but also to estimate the energy consumption associated with each installation. This could be achieved by integrating other disparate data sources, such as geographic data and energy usage patterns. Ultimately, increasingly accurate information around both consumer solar adoption and solar energy consumption would aid policymakers in the stucturing of new green policies and incentive programs.</p>
 
 									<!-- References -->
 									<hr class="major" />
 									<h2>References</h2>
-									<p id="reference1">[1] <a href="https://eto.dnvgl.com/2018/"> Energy Transition Outlook 2018</a>. DNV GL.</p>
-									<p id="reference2">[2] <a href="https://environmentamerica.org/sites/environment/files/reports/AME_Renewables-on-the-Rise_Jul18-Web.pdf">"Renewables on the Rise 2018 - Environment America.”</a></p>
-									<p id="reference3">[3] Matasci, S. <a href="https://news.energysage.com/congress-extends-the-solar-tax-credit/">"Solar tax credit"</a>. EnergySage. (6 Jan. 2019)</p>
-									<p id="reference4">[4] Solangi, K. H., et al. "A review on global solar energy policy." Renewable and sustainable energy reviews 15.4 (2011): 2149-2163.</p>
-									<p id="reference5">[5] Janes, M., 2014. <a href="https://phys.org/news/2014-05-consumers-solar-equipment.html">"Predictive models help determine which consumers buy solar equipment and why".</a> Phys.org. (6 Jan. 2019)</p>
-									<p id="reference6">[6] Rai, Varun, D. Cale Reeves, and Robert Margolis. "Overcoming barriers and uncertainties in the adoption of residential solar PV." Renewable Energy 89 (2016): 498-505.</p>
-									<p id="reference7">[7] Mnih, Volodymyr, and Geoffrey E. Hinton. "Learning to detect roads in high-resolution aerial images." European Conference on Computer Vision. Springer, Berlin, Heidelberg, 2010.</p>
-									<p id="reference8">[8] Kubat, Miroslav, Robert C. Holte, and Stan Matwin. "Machine learning for the detection of oil spills in satellite radar images." Machine learning 30.2-3 (1998): 195-215.</p>
-									<p id="reference9">[9] Malof, Jordan M., et al. "Automatic detection of solar photovoltaic arrays in high resolution aerial imagery." Applied energy 183 (2016): 229-240.</p>
-									<p id="reference10">[10] Malof, Jordan M., Leslie M. Collins, and Kyle Bradbury. "A deep convolutional neural network, with pre-training, for solar photovoltaic array detection in aerial imagery." 2017 IEEE International Geoscience and Remote Sensing Symposium (IGARSS). IEEE, 2017.</p>
-									<p id="reference11">[11] Golovko, Vladimir, et al. "Convolutional neural network based solar photovoltaic panel detection in satellite photos." 2017 9th IEEE International Conference on Intelligent Data Acquisition and Advanced Computing Systems: Technology and Applications (IDAACS). Vol. 1. IEEE, 2017.</p>
-									<p id="reference12">[12] Bradbury, Kyle, et al. "Distributed solar photovoltaic array location and extent dataset for remote sensing object identification." Scientific data 3 (2016): 160106.</p>
-									<p id="reference13">[13] Chollet, F. <a href="https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data">"Building powerful image classification models using very little data”.</a> The Keras Blog. (June 5, 2016).</p>
-									<p id="reference14">[14] Venkatesh, T. <a href="https://becominghuman.ai/building-an-image-classifier-using-deep-learning-in-python-totally-from-a-beginners-perspective-be8dbaf22dd8">“Simple Image Classification using Convolutional Neural Network — Deep Learning in python”</a></p>
-									<p id="reference15">[15] Lewinson, E. <a href="https://towardsdatascience.com/mario-vs-wario-image-classification-in-python-ae8d10ac6d63">“Mario vs. Wario: Image Classification in Python.”</a> (24 Jul 2018). </p>
-									<p id="reference16">[16] Stokes, M., Anderson, M., Chandrasekar, S., & Motta, R. <a href="https://www.w3.org/Graphics/Color/sRGB">“A Standard Default Color Space for the Internet.”</a> (1996, November 5).</p>
-									<p id="reference17">[17] Karpathy, A. <a href="http://cs231n.github.io/convolutional-networks/">“CS231n Convolutional Neural Networks for Visual Recognition.”</a> (2018).</p>
-									<p id="reference18">[18] Goodfellow, Ian, Bengio Yoshua, and Courville, Aaron, 2016. <a href="http://www.deeplearningbook.org">“CS231n Convolutional Neural Networks for Visual Recognition.”</a> (2018).</p>
-									<p id="reference19">[19] Skymind <a href="https://skymind.ai/wiki/convolutional-network">“A Beginner's Guide to Convolutional Neural Networks (CNNs).”</a></p>
-									<p id="reference20">[20] Prabhu, R. <a href="https://medium.com/@RaghavPrabhu/understanding-of-convolutional-neural-network-cnn-deep-learning-99760835f148">"Understanding of Convolutional Neural Network (CNN)."</a> (3 Mar. 2018).</p>
+									<p id="reference1" style="margin-top: -1em;">[1] <a href="https://eto.dnvgl.com/2018/"> Energy Transition Outlook 2018</a>. DNV GL.</p>
+									<p id="reference2" style="margin-top: -2em;">[2] <a href="https://environmentamerica.org/sites/environment/files/reports/AME_Renewables-on-the-Rise_Jul18-Web.pdf">"Renewables on the Rise 2018 - Environment America.”</a></p>
+									<p id="reference3" style="margin-top: -2em;">[3] Matasci, S. <a href="https://news.energysage.com/congress-extends-the-solar-tax-credit/">"Solar tax credit"</a>. EnergySage. (6 Jan. 2019)</p>
+									<p id="reference4" style="margin-top: -2em;">[4] Solangi, K. H., et al. "A review on global solar energy policy." Renewable and sustainable energy reviews 15.4 (2011): 2149-2163.</p>
+									<p id="reference5" style="margin-top: -2em;">[5] Janes, M., 2014. <a href="https://phys.org/news/2014-05-consumers-solar-equipment.html">"Predictive models help determine which consumers buy solar equipment and why".</a> Phys.org. (6 Jan. 2019)</p>
+									<p id="reference6" style="margin-top: -2em;">[6] Rai, Varun, D. Cale Reeves, and Robert Margolis. "Overcoming barriers and uncertainties in the adoption of residential solar PV." Renewable Energy 89 (2016): 498-505.</p>
+									<p id="reference7" style="margin-top: -2em;">[7] Mnih, Volodymyr, and Geoffrey E. Hinton. "Learning to detect roads in high-resolution aerial images." European Conference on Computer Vision. Springer, Berlin, Heidelberg, 2010.</p>
+									<p id="reference8" style="margin-top: -2em;">[8] Kubat, Miroslav, Robert C. Holte, and Stan Matwin. "Machine learning for the detection of oil spills in satellite radar images." Machine learning 30.2-3 (1998): 195-215.</p>
+									<p id="reference9" style="margin-top: -2em;">[9] Malof, Jordan M., et al. "Automatic detection of solar photovoltaic arrays in high resolution aerial imagery." Applied energy 183 (2016): 229-240.</p>
+									<p id="reference10" style="margin-top: -2em;">[10] Malof, Jordan M., Leslie M. Collins, and Kyle Bradbury. "A deep convolutional neural network, with pre-training, for solar photovoltaic array detection in aerial imagery." 2017 IEEE International Geoscience and Remote Sensing Symposium (IGARSS). IEEE, 2017.</p>
+									<p id="reference11" style="margin-top: -2em;">[11] Golovko, Vladimir, et al. "Convolutional neural network based solar photovoltaic panel detection in satellite photos." 2017 9th IEEE International Conference on Intelligent Data Acquisition and Advanced Computing Systems: Technology and Applications (IDAACS). Vol. 1. IEEE, 2017.</p>
+									<p id="reference12" style="margin-top: -2em;">[12] Bradbury, Kyle, et al. "Distributed solar photovoltaic array location and extent dataset for remote sensing object identification." Scientific data 3 (2016): 160106.</p>
+									<p id="reference13" style="margin-top: -2em;">[13] Chollet, F. <a href="https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data">"Building powerful image classification models using very little data”.</a> The Keras Blog. (June 5, 2016).</p>
+									<p id="reference14" style="margin-top: -2em;">[14] Venkatesh, T. <a href="https://becominghuman.ai/building-an-image-classifier-using-deep-learning-in-python-totally-from-a-beginners-perspective-be8dbaf22dd8">“Simple Image Classification using Convolutional Neural Network — Deep Learning in python”</a></p>
+									<p id="reference15" style="margin-top: -2em;">[15] Lewinson, E. <a href="https://towardsdatascience.com/mario-vs-wario-image-classification-in-python-ae8d10ac6d63">“Mario vs. Wario: Image Classification in Python.”</a> (24 Jul 2018). </p>
+									<p id="reference16" style="margin-top: -2em;">[16] Stokes, M., Anderson, M., Chandrasekar, S., & Motta, R. <a href="https://www.w3.org/Graphics/Color/sRGB">“A Standard Default Color Space for the Internet.”</a> (1996, November 5).</p>
+									<p id="reference17" style="margin-top: -2em;">[17] Karpathy, A. <a href="http://cs231n.github.io/convolutional-networks/">“CS231n Convolutional Neural Networks for Visual Recognition.”</a> (2018).</p>
+									<p id="reference18" style="margin-top: -2em;">[18] Goodfellow, Ian, Bengio Yoshua, and Courville, Aaron, 2016. <a href="http://www.deeplearningbook.org">“CS231n Convolutional Neural Networks for Visual Recognition.”</a> (2018).</p>
+									<p id="reference19" style="margin-top: -2em;">[19] Skymind <a href="https://skymind.ai/wiki/convolutional-network">“A Beginner's Guide to Convolutional Neural Networks (CNNs).”</a></p>
+									<p id="reference20" style="margin-top: -2em;">[20] Prabhu, R. <a href="https://medium.com/@RaghavPrabhu/understanding-of-convolutional-neural-network-cnn-deep-learning-99760835f148">"Understanding of Convolutional Neural Network (CNN)."</a> (3 Mar. 2018).</p>
 									
 									
 								</section>
@@ -207,7 +213,7 @@
 										<span class="opener">Recent Projects</span>
 										<ul>
 											<li><a href="capstone.html">An Agent-Based Modeling Approach to Addressing the Opioid Crisis</a></li>
-											<li><a href='ethics.html'>An Examination of COMPAS and Bias in Criminal Risk-Assessment</a></li>
+											<li><a href='ethics.html'>An Examination of Bias in Criminal Risk-Assessment</a></li>
 											<li><a href="solarPV.html">Detecting Solar PV with Supervised Learning</a></li>
 											<li><a href='housingtransportation.html'>Housing Price Predictions in New York City</a></li>
 										</ul>
