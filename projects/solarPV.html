@@ -4,7 +4,7 @@
 		<title>Anna Berman</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 
@@ -21,7 +21,7 @@
 									<li><a href="https://www.linkedin.com/in/anna-berman-101/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 									<li><a href="https://github.com/aberman6" class="icon brands fa-github"><span class="label">Github</span></a></li>
 									<li><a href="mailto:aberman3525@gmail.com?subject=Hello!" class="icon regular fa-envelope"><span class="label">Gmail</span></a></li>
-									<li><a href="AnnaBerman_Resume.pdf" class="icon solid fa-download"><span class="label">Resume</span></a></li>								
+									<li><a href="../AnnaBerman_Resume.pdf" class="icon solid fa-download"><span class="label">Resume</span></a></li>								
 								</ul>
 							</header>
 
@@ -32,7 +32,7 @@
 										<p>Convolutional Neural Networks handle pixels in context making them an ideal choice for image recognition.</p>									
 									</header>
 									<p>Contributors to this project include <a href='https://www.linkedin.com/in/viggy-kumaresan/'>Viggy Kumaresan</a>, <a href='https://www.linkedin.com/in/azucenamv/?locale=en_US'>Azucena Morales</a>, <a href='https://www.linkedin.com/in/yifei-wang-0249b5170/'>Yifei Wang</a>, and <a href='https://www.linkedin.com/in/zhaosicong/'>Sicong Zhao</a>.</p>
-									<span class="image main"><img src="images/solarPV-cover.png" alt="" /></span>
+									<span class="image main"><img src="../images/solarPV-cover.png" alt="" /></span>
 									
 									<!-- Intro -->
 									<h2>Why bother with solar panel detection?</h2>
@@ -42,17 +42,17 @@
 									
                                     <!-- Previous Research -->
 									<h3>Previous Research</h3>
-									<p>Previous studies have explored the use of machine learning for satellite image classification with high rates of accuracy of detection with a low rate of incorrect classification <a href="#reference7">[7,</a><a href="#reference8"> 8]</a>. Specifically, random forest classification and CNN approaches have been shown to accurately measure size, shape and capacity of solar PV from satellite imagery <a href="#reference9">[9,</a><a href="#reference10"> 10,</a><a href="#reference11"> 11]</a>. However, to implement approaches like these, as with any supervised learning approach, a training set of data with labelled classes is required in order to both model the data as well as evaluate performance.Unfortunately, the number of available labelled datasets containing satellite imagery of solar PV is limited. An example of such a dataset is the Distributed Solar Photovoltaic Array Location and Extent Dataset containing geospatial coordinates and border vertices for over 19,000 solar panels across 601 high-resolution images from four cities in California<a href="#reference12"> [12]</a>.</p>
+									<p>Previous studies have explored the use of machine learning for satellite image classification with high rates of accuracy of detection with a low rate of incorrect classification <a href="#reference7">[7,</a><a href="#reference8"> 8]</a>. Specifically, random forest classification and CNN approaches have been shown to accurately measure size, shape and capacity of solar PV from satellite imagery <a href="#reference9">[9,</a><a href="#reference10"> 10,</a><a href="#reference11"> 11]</a>. However, to implement approaches like these, as with any supervised learning approach, a training set of data with labelled classes is required in order to both model the data as well as evaluate performance. Unfortunately, the number of available labelled datasets containing satellite imagery of solar PV is limited. An example of such a dataset is the Distributed Solar Photovoltaic Array Location and Extent Dataset containing geospatial coordinates and border vertices for over 19,000 solar panels across 601 high-resolution images from four cities in California<a href="#reference12"> [12]</a>.</p>
 
 									<!-- Data Sources -->
 									<hr class="major" />
 									<h2>Data Sources</h2>
 									<span class="image right">
 										<h5>Images Containing Solar PV</h5>
-										<img src="images/solarPV-PV.png" alt="" />
+										<img src="../images/solarPV-PV.png" alt="" />
 										<figcaption>Solar PV instances varied in size and color, but shared similar shapes.</figcaption>
 										<h5>Images Not Containing Solar PV</h5>
-										<img src="images/solarPV-PVno.png" alt="" />
+										<img src="../images/solarPV-PVno.png" alt="" />
 										<figcaption>Surrounding landscape was similar across both images with and without solar PV.</figcaption>
 									</span>
 									<p>The primary dataset contains 1,500 satellite images in TIFF format, with each image consisting of 101 pixels x 101 pixels and three color channels (Red, Green, Blue). In total, each image is represented as 101 x 101 x 3 array, which is a total of 30,603 numerical entries with values ranging from 0 and 255.</p>
@@ -62,9 +62,9 @@
 									<!-- Methods -->
 									<hr class="major" />
 									<h2>Methods</h2>
-									<span class="image right" style="max-width: 35%;">
+									<span class="image left" style="max-width: 35%;">
 										<h5 style="text-align: center;">Analysis Workflow</h5>
-										<img src="images/solarPV-flowchart.png" alt="" />
+										<img src="../images/solarPV-flowchart.png" alt="" />
 									</span>
 									
 									<h4>Train-Test Split</h4>
@@ -73,30 +73,23 @@
 									<h4>Data Preprocessing</h4>
 									<p>Data preprocessing took three general steps. In the first step of preprocessing, RGB values were rescaled to be between 0 and 1 in order to avoid high values compared to a typical learning rate <a href="#reference13"> [13]</a>.</p>
 									<p>During the second step of preprocessing, random modifications were applied to images in order to prevent overfitting including horizontal flips, image shears, and zooms. By increasing the diversity of images in the training set we can ideally to reduce overfit and ultimately increase out-of-sample accuracy <a href="#reference13"> [13,</a><a href="#reference14"> 14,</a><a href="#reference15"> 15]</a>.</p>
-									<p>Finally, lumiansce and gradient features were added to each images. These features were selected based on properties we know to be true of solar panels, they absorb light and they are angular in shape. By adding these two features, we hoped to increase prediction accuracy <a href="#reference16">[16]</a>.</p>
+									<p>Finally, luminance and gradient features were added to each image. These features were selected based on properties we know to be true of solar panels, they absorb light and they are angular in shape. By adding these two features, we hoped to increase prediction accuracy <a href="#reference16">[16]</a>.</p>
 									<span class="image left" style="max-width: 65%;">
-										<img src="images/solarPV-features.png" alt="" />
+										<img src="../images/solarPV-features.png" alt="" />
 										<figcaption>Example effect of relative luminance and gradient channels. Additional features hopefully help delineate between images with and without solar PV by making the differences between classes more salient.</figcaption>
 									</span>
 
 									<h4>Convolutional Neural Networks (CNN)</h4>
-									<p>CNN are a type of neural network for processing data that has a grid-like topology. CNNs are widely known in computer vision for being successful for tasks such as classifying images, clustering images, and object recognition <a href="#reference17">[17]</a>. At they’re core, CNNs use the convolution operation, instead of matrix multiplication in at least one of their layers. As other neural networks, they are conformed by a sequence of layers. The layers of CNN have neurons arranged in three dimensions: width, height and depth. There are different type of CNN architectures, but there are main type of layers <a href="#reference18">[18,</a><a href="#reference19"> 19]</a></p>
-									<ol>
-										<li><b>Convolutional Layer:</b> This layer applies a convolution operation, the output is passed to the next layer.</li>
-										<li><b>Pool:</b> This layer performs a down sampling operation, by combining the outputs of neurons at one layer into a single neuron in the next layer.</li>
-										<li><b>Dropout:</b> This layer performs an analogous feature selection operation as random forest, by randomly turning off some proportion of all nodes.</li>
-										<li><b>Flatten:</b> This layer flattens the pooled feature map into a column</li>
-										<li><b>Full-Connection:</b> The layer will compute the class scores, each neuron in this layer will be connected to all the neurons in the previous one.</li>
-									</ol>
+									<p>CNNs are a type of neural network for processing data that has a grid-like topology. CNNs are widely known in computer vision for being successful for tasks such as classifying images, clustering images, and object recognition <a href="#reference17">[17]</a>. At they’re core, CNNs use the convolution operation, instead of matrix multiplication in at least one of their layers. Similar to other neural networks, they are conformed by a sequence of layers. The layers of CNN have neurons arranged in three dimensions: width, height and depth. There are many different types of CNN architectures, but in essence, <strong>CNNs handle pixels in context to their surroundings making them an ideal choice for image recognition</strong>. <a href="#reference18">[18,</a><a href="#reference19"> 19]</a></p>
 									<span class="image fit">
-										<img src="images/solarPV-cnn.png" alt="" />
+										<img src="../images/solarPV-cnn.png" alt="" />
 										<figcaption>The convolutional layer applies a convolution operation, the output is passed to the next layer. The pool layer performs a down sampling operation by combining the outputs of neurons at one layer into a single neuron in the next layer. The flatten reshapes the feature map into a column. The full-connection layer will compute the class scores, each neuron in this layer will be connected to all the neurons in the previous one <a href="#reference20">[20]</a>.</figcaption>
 									</span>
 									
 									<!-- Results -->
 									<hr class="major" />
 									<h2>Results</h2>
-									<p>Compared to a variety of modeling approaches, a CNN approached proved to be the strongest. KNN classification and gaussian naive bayes modeling performed comparably to each other with AUCs of 0.639 and 0.643 respectively. Logistic regression was able to achieve a surpriseing 0.785 AUC. Random forest modeling performed even stronger with and AUC of 0.824. Finally, CNN resulted in validation accuracy of 0.957. Although AUC and validation accuracy are not measured on the same scale, the results suggest the CNN model shows a meaningful improvement in accuracy.</p>
+									<p>Compared to a variety of modeling approaches, a CNN approached proved to be the strongest. KNN classification and gaussian naive bayes modeling performed comparably to each other with AUCs of 0.639 and 0.643 respectively. Logistic regression was able to achieve a surprising 0.785 AUC. Random forest modeling performed even stronger with and AUC of 0.824. Finally, CNN resulted in validation accuracy of 0.957. Although AUC and validation accuracy are not measured on the same scale, the results suggest the CNN model shows a meaningful improvement in accuracy.</p>
 									<h4>Model Accuracy</h4>
 									<div class="table-wrapper">
 										<table>
@@ -147,14 +140,14 @@
 										<div class="col-6 col-12-small">
 											<span class="image fit">
 												<h4>Logistic Regression Performance by Proprocessing Method</h4>
-												<img src="images/solarPV-logit.png" alt="" />
+												<img src="../images/solarPV-logit.png" alt="" />
 												<figcaption>Adding a gradient feature increases model performances across the entire range of PCA values. Adding a relative luminance features shows little impact. The optimal choice of PCA components is approximately 225.</figcaption>
 											</span>
 										</div>
 										<div class="col-6 col-12-small">
 											<span class="image fit">
 												<h4>Random Forest Performance by Proprocessing Method</h4>
-												<img src="images/solarPV-randomforest.png" alt="" />
+												<img src="../images/solarPV-randomforest.png" alt="" />
 												<figcaption>Adding a gradient feature increased model performances across the entire range of number of trees. Adding a relative luminance feature might sometimes hurt the performance. The optimal choice of tree number is approximately 300.</figcaption>
 											</span>
 										</div>
@@ -208,14 +201,14 @@
 									<h2>Menu</h2>
 								</header>
 								<ul>
-									<li><a href="index.html">About Me</a></li>
+									<li><a href="../index.html">About Me</a></li>
 									<li>
 										<span class="opener">Recent Projects</span>
 										<ul>
 											<li><a href="capstone-short.html">An Agent-Based Modeling Approach to Addressing the Opioid Crisis</a></li>
 											<li><a href='ethics.html'>An Examination of Bias in Criminal Risk-Assessment</a></li>
 											<li><a href='housingtransportation-short.html'>Housing Price Predictions in New York City</a></li>
-											<li><a href="solarPV.html">Detecting Solar Panels From Satellite Imagery</a></li>
+											<li><a href="solarPV-short.html">Detecting Solar Panels From Satellite Imagery</a></li>
 										</ul>
 								</ul>
 							</nav>
@@ -227,7 +220,7 @@
 								</header>
 								<div class="mini-posts">
 									<article>
-										<a href="capstone-short.html" class="image"><img src="images/capstone-ABM.png" alt="" /></a>
+										<a href="capstone-short.html" class="image"><img src="../images/capstone-ABM.png" alt="" /></a>
 										<p><b>An ABM Approach to Addressing the Opioid Crisis: </b>How can we predict the effects of public health intervention on a unique community of pain patients? </p>
 									</article>
 								</div>
@@ -245,7 +238,7 @@
 								<li class= "icon solid fa-envelope" ><a href="mailto:aberman3525@gmail.com?subject=Hello!">Email Me</a></li>
 								<li class= "icon brands fa-linkedin"><a href="https://www.linkedin.com/in/anna-berman-101/">Connect on LinkedIn</a></li>
 								<li class= "icon brands fa-github"><a href="https://github.com/aberman6">Check out my Github</a></li>
-								<li class= "icon solid fa-download"><a href="AnnaBerman_Resume.pdf">Download my Resume</a></li>
+								<li class= "icon solid fa-download"><a href="../AnnaBerman_Resume.pdf">Download my Resume</a></li>
 							</ul>
 						</section>
 
@@ -255,11 +248,11 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
 
 	</body>
 </html>

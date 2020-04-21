@@ -4,7 +4,7 @@
 		<title>Anna Berman</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 
@@ -21,14 +21,14 @@
 									<li><a href="https://www.linkedin.com/in/anna-berman-101/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 									<li><a href="https://github.com/aberman6" class="icon brands fa-github"><span class="label">Github</span></a></li>
 									<li><a href="mailto:aberman3525@gmail.com?subject=Hello!" class="icon regular fa-envelope"><span class="label">Gmail</span></a></li>
-									<li><a href="AnnaBerman_Resume.pdf" class="icon solid fa-download"><span class="label">Resume</span></a></li>								
+									<li><a href="../AnnaBerman_Resume.pdf" class="icon solid fa-download"><span class="label">Resume</span></a></li>								
 								</ul>
 							</header>
 
 							<!-- Content -->
 								<section>
 									<header><h1>The Influence of Transportation Accessibility on Property Value</h1></header>
-									<span class="image left"><img src="images/housing-main.jpg" alt="" /></span>
+									<span class="image left"><img src="../images/housing-main.jpg" alt="" /></span>
                                     <p>Contributors to this project include <a href='https://www.linkedin.com/in/viggy-kumaresan/'>Viggy Kumaresan</a>, <a href='https://www.linkedin.com/in/azucenamv/?locale=en_US'>Azucena Morales</a>, <a href='https://www.linkedin.com/in/yifei-wang-0249b5170/'>Yifei Wang</a>, and <a href='https://www.linkedin.com/in/zhaosicong/'>Sicong Zhao</a>.</p>
 									
 									<h2>What does transportation have to do with housing prices?</h2>
@@ -43,8 +43,8 @@
 									<!-- Data Sources -->
 									<hr class="major" />
 									<h2>Data Sources</h2>
-									<p>In order to assess the impact of transportation accessibility on housing prices in New York City, New York, we integrate several data sources:</p>
-									<div class="table-wrapper">
+									<p>In order to assess the impact of transportation accessibility on housing prices in New York City, New York, we integrated several data sources:</p>
+									<div class="table-wrapper" style="font-size: 80%;">
 										<table>
 											<thead>
 												<tr>
@@ -89,87 +89,26 @@
 										</table>
                                     </div>
                                     <span class="image left">
-                                        <img src="images/housing-colormap.png" alt="" />
+                                        <img src="../images/housing-colormap.png" alt="" style="max-width: 80%;"/>
                                         <figcaption>High property sales prices, subway, and bike accessibility concentrate in similar areas.</figcaption>
                                     </span>
                                     <p>Taking a look at housing prices in NYC, the highest property prices cluster around lower Manhattan and West Brooklyn with property sales decreasing with distance from this hub. Subway and bike stations also cluster around this area. Citi Bike System stations in particular are exclusively located in lower Manhattan. This posed a challenge during analysis as distance to the nearest bike station can also be considered a proxy for being in this high priced area.  </p>
                                     
-
-									<!-- Methods -->
-									<hr class="major" />
-									<h2>Methods</h2>
 									
-									<h4>Data Preprossing</h4>
+									<h3>Data Preprocessing</h3>
 									<p>Linking transportation information to each property was integral to this research. Each property was geolocated using Google Maps API. Features based on property proximity to transportation methods were calculated using these coordinates.</p>
-									<h4>Metrics</h4>
-									<p>Several modeling approaches were evaluated in this analysis. These models included linear regression, KNN, classification and regression tree (CART), random forest, and neural networks. These models were selected based on the ability to predict a continuous outcome. For each modeling approach, the Mean-Squared Error (MSE) was used as our performance metric, as this is a commonly used evaluation criterion for regression problems. Performance was also evaluated using R-squared.</p>
 									
 									<!-- Results -->
 									<hr class="major" />
 									<h2>Results</h2>
-									<p>For each modeling approach, performance was compared to an identical model without the addition of transportation accessibility. In this way, we are able to quantify the value of transportation features in prediction for each approach. Based on the results from our model comparisons, <strong>a random forest approach produced the most accurate predictions</strong>. Random Forest models are especially useful for interpretation because they produce ranked feature importance scores to indicate which variables were most useful in property price predictions.</p>
-									<h4>Model Accuracy</h4>
-									<div class="table-wrapper">
-										<table>
-											<col>
-											<colgroup span="2"></colgroup>
-											<colgroup span="2"></colgroup>
-											<tr>
-											  <td rowspan="2"></td>
-											  <th colspan="2" scope="colgroup">MSE</th>
-											  <th colspan="2" scope="colgroup">R-Squared</th>
-											</tr>
-											<tr>
-											  <th scope="col">Property Features Only</th>
-											  <th scope="col">Property Features & Transportation Features</th>
-											  <th scope="col">Property Features Only</th>
-											  <th scope="col">Property Features & Transportation Features</th>
-											</tr>
-											<tr>
-											  <th scope="row">Linear Regression</th>
-											  <td>3.85 x 10^12</td>
-											  <td>4.37 x 10^12</td>
-											  <td>-4.91</td>
-											  <td>-5.72</td>
-											</tr>
-											<tr>
-											  <th scope="row">K Nearest Neighbors (KNN)</th>
-											  <td>5.27 x 10^11</td>
-											  <td>4.00 x 10^11</td>
-											  <td>0.189</td>
-											  <td>0.386</td>
-											</tr>
-											<tr>
-												<th scope="row">Classification And Regression Tree (CART)</th>
-												<td>3.58 x 10^11</td>
-												<td>3.55 x 10^11</td>
-												<td>0.395</td>
-												<td>0.401</td>
-											  </tr>
-											<tr>
-												<th scope="row">Neural Network</th>
-												<td>3.28 x 10^11</td>
-												<td>3.25 x 10^11</td>
-												<td>0.446</td>
-												<td>0.465</td>
-											  </tr>
-											  <tr>
-												<th scope="row">Random Forest</th>
-												<td>2.58 x 10^11</td>
-												<td>2.27 x 10^11</td>
-												<td>0.562</td>
-												<td>0.612</td>
-											  </tr>
-										  </table>
-									</div>
-
-									<span class="image left">
+									<p>In a comparison between linear regression, k-nearest neighbors (KNN), classification and regression tree (CART), neural network, and random forest approaches, <strong>a random forest approach produced the most accurate predictions, explaining 61.2% of variance in property prices</strong>. Random Forest models are especially useful for interpretation because they produce ranked feature importance scores to indicate which variables were most useful in property price predictions.</p>
+									<span class="image right">
 										<h4>Random Forest Feature Importance</h4>
-										<img src="images/housing-features.png" alt="" />
+										<img src="../images/housing-features.png" alt="" />
 										<figcaption>By including transportation data from subways, bike shares, taxis and Uber, we still see that square footage and year built are the most predictive features in our baseline model. However, we also see that the nearest distance to a bike and subway stations are also important predictors.</figcaption>
 									</span>
-									<p><strong>By including transportation data from subways, bike shares, taxis and Uber to our random forest approach, we explain an additional 5% of the variance in housing prices</strong>. In terms of specific features, we still see that square footage and year built are the most predictive features in our baseline model. However, we also see that the nearest distance to a bike and subway stations are also important predictors.</p>
-									<p>Our random forest model produced a variety of predictions, some accurate, some inaccurate, and some mediocre (examples of which are shown below). The housing sale price in NYC Property Sales dataset have a long tail on both sides; some houses are extremely expensive while others are extremely cheap. There are potentially some other hidden features contributing to the price but fail to be included in our model, such as luxury/poor amenities, great/poor directions or views, etc. Since the transportation features are determined mainly by house location but not house features itself, our model tend to averaging the house price in certain areas, and thus fail to predict the outliers. That would result in overestimation on below average property values and underestimation on above average property values for any given area.</p>
+									<p>Importantly, for each modeling approach, performance was compared to an identical model without the addition of transportation accessibility. <strong>By including transportation data from subways, bike shares, taxis and Uber to our random forest approach, we explain an additional 5% of the variance in housing prices</strong>. In terms of specific features, we still see that square footage and year built are the most predictive features in our baseline model. However, we also see that the nearest distance to a bike and subway stations are also important predictors.</p>
+									<p>Our random forest model produced a variety of predictions, some accurate, some inaccurate, and some mediocre. The housing sale price in NYC Property Sales dataset have a long tail on both sides; some houses are extremely expensive while others are extremely cheap. There are undoubtably other features not included in our datasets contributing to the price, such as luxury/poor amenities, great/poor directions or views, etc. Since the transportation features are determined mainly by house location but not house features itself, our model tend to averaging the house price in certain areas, and thus fail to predict the outliers. That would result in overestimation on below average property values and underestimation on above average property values for any given area.</p>
 									
 									<!-- Conclusion -->
 									<hr class="major" />
@@ -188,11 +127,7 @@
 									<p id="reference3" style="margin-top: -2em;">[3] Gao, G., Bao, Z., Cao, J., Qin, A. K., Sellis, T., & Wu, Z. (2019). Location-Centered House Price Prediction: A Multi-Task Learning Approach. arXiv preprint arXiv:1901.01774.</p>
 									<p id="reference4" style="margin-top: -2em;">[4] Kilpatrick, Throupe, Carruthers, & Krause (2007). The Impact of Transit Corridors on Residential Property Values. Journal of Real Estate Research, 29(3), 303-320.</p>
 									<p id="reference5" style="margin-top: -2em;">[5] Small, E. (2014). <a href="https://therealdeal.com/2018/03/20/sayonara-subway-how-ridesharing-apps-are-changing-the-real-estate-calculus-for-brokers-and-developers/">Sayonara, subway: How ridesharing apps are changing the real estate calculus for brokers and developers.</a> The Real Deal.</p>
-									<p id="reference6" style="margin-top: -2em;">[6] Sobolevsky, S., Levitskaya, E., Chan, H., Postle, M., & Kontokosta, C. (2018). Impact Of Bike Sharing In New York City. arXiv preprint arXiv:1808.06606.</p>
-									<p id="reference7" style="margin-top: -2em;">[7] El-Geneidy, A., van Lierop, D., & Wasfi, R. (2016). Do people value bicycle sharing? A multilevel longitudinal analysis capturing the impact of bicycle sharing on residential sales in Montreal, Canada. Transport policy, 51, 174-181.</p>
-									<p id="reference8" style="margin-top: -2em;">[8] Ma, X., Yu, H., Wang, Y., & Wang, Y. (2015). Large-scale transportation network congestion evolution prediction using deep learning theory. PloS one, 10(3), e0119044.</p>
-									<p id="reference9" style="margin-top: -2em;">[9] Turakhia, C., (2017). <a href='https://eng.uber.com/machine-learning/'>Engineering More Reliable Transportation with Machine Learning and AI at Uber.</a> Uber Engineering.</p>
-								</section>
+									</section>
 								
 
 						</div>
@@ -208,14 +143,14 @@
 									<h2>Menu</h2>
 								</header>
 								<ul>
-									<li><a href="index.html">About Me</a></li>
+									<li><a href="../index.html">About Me</a></li>
 									<li>
 										<span class="opener">Recent Projects</span>
 										<ul>
 											<li><a href="capstone-short.html">An Agent-Based Modeling Approach to Addressing the Opioid Crisis</a></li>
 											<li><a href='ethics.html'>An Examination of Bias in Criminal Risk-Assessment</a></li>
 											<li><a href='housingtransportation-short.html'>The Influence of Transportation Accessibility on Property Value</a></li>
-											<li><a href="solarPV.html">Detecting Solar Panels From Satellite Imagery</a></li>
+											<li><a href="solarPV-short.html">Detecting Solar Panels From Satellite Imagery</a></li>
 										</ul>
 								</ul>
 							</nav>
@@ -227,7 +162,7 @@
 								</header>
 								<div class="mini-posts">
 									<article>
-										<a href="capstone-short.html" class="image"><img src="images/capstone-ABM.png" alt="" /></a>
+										<a href="capstone-short.html" class="image"><img src="../images/capstone-ABM.png" alt="" /></a>
 										<p><b>An ABM Approach to Addressing the Opioid Crisis: </b>How can we predict the effects of public health intervention on a unique community of pain patients? </p>
 									</article>
 								</div>
@@ -245,7 +180,7 @@
 								<li class= "icon solid fa-envelope" ><a href="mailto:aberman3525@gmail.com?subject=Hello!">Email Me</a></li>
 								<li class= "icon brands fa-linkedin"><a href="https://www.linkedin.com/in/anna-berman-101/">Connect on LinkedIn</a></li>
 								<li class= "icon brands fa-github"><a href="https://github.com/aberman6">Check out my Github</a></li>
-								<li class= "icon solid fa-download"><a href="AnnaBerman_Resume.pdf">Download my Resume</a></li>
+								<li class= "icon solid fa-download"><a href="../AnnaBerman_Resume.pdf">Download my Resume</a></li>
 							</ul>
 						</section>
 
@@ -255,11 +190,11 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
 
 	</body>
 </html>

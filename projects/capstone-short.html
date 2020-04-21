@@ -4,7 +4,7 @@
 		<title>Anna Berman</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 
@@ -21,7 +21,7 @@
 									<li><a href="https://www.linkedin.com/in/anna-berman-101/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 									<li><a href="https://github.com/aberman6" class="icon brands fa-github"><span class="label">Github</span></a></li>
 									<li><a href="mailto:aberman3525@gmail.com?subject=Hello!" class="icon regular fa-envelope"><span class="label">Gmail</span></a></li>
-									<li><a href="AnnaBerman_Resume.pdf" class="icon solid fa-download"><span class="label">Resume</span></a></li>								
+									<li><a href="../AnnaBerman_Resume.pdf" class="icon solid fa-download"><span class="label">Resume</span></a></li>								
 								</ul>
 							</header>
 
@@ -34,7 +34,7 @@
                                     <a href="https://github.com/aberman6/dukeMIDS-RTI-Capstone-2020" download class="button big">Check out the Github repo</a>
 									<hr class="major" />
 									<!-- Research Purpose & Background -->
-									<h2>Motivation</h2>
+									<h2>The Opioid Crisis is a National and a Local Issue</h2>
 									<p>Every day, more than 130 US adults die from opioid overdoses. Opioid misuse has become a national public health crisis affecting individuals across the country and in our own backyards <a href="#reference1">[1]</a>. In the last 20 years, the number of medication and drug poisoning deaths in North Carolina has increased nearly six-fold, from about 400 deaths in 1999 to more than 2,400 in 2017. North Carolina has taken steps to prevent these deaths, most significantly through the 2017 North Carolina Opioid Action Plan, which focuses on prevention of opioid misuse, reduction of harm, and expansion of connections to care. Just two years after the Action Plan’s launch, opioid dispensing has decreased by 24%, prescriptions for drugs used to treat opioid use disorders has increased by 15%, and opioid use disorder treatment for uninsured and Medicaid beneficiaries has increased by 20% <a href="#reference2">[2]</a>.</p>
 									<!-- Primary Questions -->
 									<p>Despite these advances, the number of opioid related deaths has not declined <a href="#reference3">[3]</a>. To tackle this issue, <a href='https://www.linkedin.com/in/allisonryoung/'>Allison Young</a> and I partnered with <a href='https://www.rti.org/centers/rti-center-data-science'>RTI International</a> to answer three questions:</p>
@@ -49,7 +49,7 @@
 									<h3>Agent-Based Modeling</h3>
 									<span class="image right" style="max-width: 25%;">
 										<h5>Agent-Based Model Community</h5>
-										<img src="images/capstone-ABM.png" alt="">
+										<img src="../images/capstone-ABM.png" alt="">
 										<figcaption>A screenshot of the Netlogo model representing the social connections between opioid users in the Agent-Based Model. Each agent has social connections with other agents as well as other entities in the community such as pharmacies or physicians. Orange circles represent dealers, yellow circles represent emergency departments, blue triangles represent physicians, and blue squares represent pharmacies. Green agents represent compliant patients and red agents represent noncompliant patients.</figcaption>
 									</span>
 
@@ -63,9 +63,9 @@
 									<h2>Question 1: Who Dies From the Opioid Crisis?</h2>
 									<!-- Descriptive -->
 									<span class="image left" style="max-width: 40%;">
-										<img src="images/capstone-overdose_dists.png" alt="" />
+										<img src="../images/capstone-overdose_dists.png" alt="" />
 										<figcaption>Distribution of Durham drug overdoses from 2004-2014 deaths by race. Opioid deaths primarily affect white individuals.</figcaption>
-										<img src="images/capstone-overdose_map.png" alt="" />
+										<img src="../images/capstone-overdose_map.png" alt="" />
 										<figcaption>Map of all type drug overdose death rates per 1,000 from 2004-2014 in Durham County. Data from NC SCHS. A cluster of deaths appear near the Lakewood and Golden Belt neighborhoods of downtown Durham. Sparsely populated block groups in Durham are disproportionately high in opioid-related deaths compared to the population of the county. We suspect many of these deaths occur in public areas such as large parks as opposed to residential areas.</figcaption>
 									</span>
 									<p>To understand who is dying from the opioid crisis, we first examined where Durham residents are dying from opioid-related causes. This analysis utilized geocoded death records from 2010 to 2016 made available to us by the NC State Center for Health Statistics (NC SCHS) and RTI. <a href="#reference5">[5, </a><a href="#reference6">6, </a><a href="#reference7">7, </a><a href="#reference8">8] </a>.</p>
@@ -78,7 +78,7 @@
 									<h2>Question 2: How Can We Model The Lives of A Unique Community of Pain Patients?</h2>
 									<span class="image right" style="max-width: 45%;">
 										<h5>Conceptual Model of the Patient Pathway</h5>
-										<img src="images/capstone-flowchart.png" alt="">
+										<img src="../images/capstone-flowchart.png" alt="">
 										<figcaption>A conceptual model of the patient pathway used as inspiration for the ABM. This conceptual model is essentially a Markov chain. A patient can transition between the stages from pain prescription to the use of heroin. At each point of time, an individual can stay in the current state or transition to the next state in the diagram. Each transition occurs with an assigned probability not shown in this diagram. In the ABM, each agent is transitioning through a version of this Markov chain.</figcaption>
 									</span>
 									<p>Modeling a community of pain patients is no simple task. Considering the life of just one pain patient involves hundreds of decisions, actions, and outcomes. Incorporating multiple pain patients introduces a tangled web of relationships and interactions. Modeling these communities of pain patients is possible with agent-based models, which effectively simulate the lives of patients prescribed opioids over the course of five years. These models are enormous collections of agents running through identical Markov chains for a fixed period of time.</p>
@@ -95,7 +95,7 @@
 									<p>Specifically, <b>we explored the effects of six different interventions</b>: 1) naloxone availability, 2) PDMP compliance, 3) Emergency Department (ED) initial dosage, 4) buprenorphine treatment chance, 5) average prescribing rate, and 6) average ED prescribing rate. We applied each intervention 50 times to the ABM at five varying degrees. By running so many iterations, our estimates are protected from the effects of any single outlier. <b>We evaluated the effects of these interventions based on five outcome metrics</b> 1) number of opioid overdoses, 2) number of opioid deaths, 3) number of heroin overdoses, 4) number of heroin deaths, 5) number of heroin users.</p>
 									<span class="image left" style="max-width: 60%;">
 										<h5>Predicted Effect of Interventions</h5>
-										<img src="images/capstone-resutls.png" alt="" />
+										<img src="../images/capstone-resutls.png" alt="" />
 										<figcaption>Naloxone availability and emergency department initial dosages had positive effects on the simulated community while all other interventions did not show meaningful effects.</figcaption>
 									</span>
 									<p><b>Our results suggest that naloxone availability and ED initial dose have the largest effect on outcomes</b>. According to our findings, increased naloxone availability was associated with increased overdoses but a decreased death rate, while ED initial dosages over 75 MME was associated with increased heroin overdoses and deaths. </p>
@@ -168,14 +168,14 @@
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="index.html">About Me</a></li>
+										<li><a href="../index.html">About Me</a></li>
 										<li>
 											<span class="opener">Recent Projects</span>
 											<ul>
 												<li><a href="capstone-short.html">An Agent-Based Modeling Approach to Addressing the Opioid Crisis</a></li>
 												<li><a href='ethics.html'>An Examination of Bias in Criminal Risk-Assessment</a></li>
 												<li><a href='housingtransportation-short.html'>The Influence of Transportation Accessibility on Property Value</a></li>
-												<li><a href="solarPV.html">Detecting Solar Panels From Satellite Imagery</a></li>
+												<li><a href="solarPV-short.html">Detecting Solar Panels From Satellite Imagery</a></li>
 											</ul>
 									</ul>
 								</nav>
@@ -187,7 +187,7 @@
 									</header>
 									<div class="mini-posts">
 										<article>
-											<a href="capstone-short.html" class="image"><img src="images/capstone-ABM.png" alt="" /></a>
+											<a href="capstone-short.html" class="image"><img src="../images/capstone-ABM.png" alt="" /></a>
 											<p><b>An ABM Approach to Addressing the Opioid Crisis: </b>How can we predict the effects of public health intervention on a unique community of pain patients? </p>
 										</article>
 									</div>
@@ -206,7 +206,7 @@
 										<li class= "icon solid fa-envelope" ><a href="mailto:aberman3525@gmail.com?subject=Hello!">Email Me</a></li>
 										<li class= "icon brands fa-linkedin"><a href="https://www.linkedin.com/in/anna-berman-101/">Connect on LinkedIn</a></li>
 										<li class= "icon brands fa-github"><a href="https://github.com/aberman6">Check out my Github</a></li>
-										<li class= "icon solid fa-download"><a href="AnnaBerman_Resume.pdf">Download my Resume</a></li>
+										<li class= "icon solid fa-download"><a href="../AnnaBerman_Resume.pdf">Download my Resume</a></li>
 									</ul>
 								</section>
 
@@ -216,11 +216,11 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
 
 	</body>
 </html>

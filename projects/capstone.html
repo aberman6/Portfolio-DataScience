@@ -4,7 +4,7 @@
 		<title>Anna Berman</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 
@@ -21,7 +21,7 @@
 									<li><a href="https://www.linkedin.com/in/anna-berman-101/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 									<li><a href="https://github.com/aberman6" class="icon brands fa-github"><span class="label">Github</span></a></li>
 									<li><a href="mailto:aberman3525@gmail.com?subject=Hello!" class="icon regular fa-envelope"><span class="label">Gmail</span></a></li>
-									<li><a href="AnnaBerman_Resume.pdf" class="icon solid fa-download"><span class="label">Resume</span></a></li>								
+									<li><a href="../AnnaBerman_Resume.pdf" class="icon solid fa-download"><span class="label">Resume</span></a></li>								
 								</ul>
 							</header>
 
@@ -35,7 +35,7 @@
 									<a href="https://github.com/aberman6/dukeMIDS-RTI-Capstone-2020" download class="button big">Check out the Github repo</a>
 									<hr class="major" />
 									<!-- Research Purpose & Background -->
-									<h2>Motivation</h2>
+									<h2>The Opioid Crisis is a National and a Local Issue</h2>
 									<p>Every day, more than 130 US adults die from opioid overdoses. Opioid misuse has become a national public health crisis affecting individuals across the country and in our own backyards <a href="#reference1">[1]</a>. In the last 20 years, the number of medication and drug poisoning deaths in North Carolina has increased nearly six-fold, from about 400 deaths in 1999 to more than 2,400 in 2017. North Carolina has taken steps to prevent these deaths, most significantly through the 2017 North Carolina Opioid Action Plan, which focuses on prevention of opioid misuse, reduction of harm, and expansion of connections to care. Just two years after the Action Plan’s launch, opioid dispensing has decreased by 24%, prescriptions for drugs used to treat opioid use disorders has increased by 15%, and opioid use disorder treatment for uninsured and Medicaid beneficiaries has increased by 20% <a href="#reference2">[2]</a>.</p>
 									<!-- Primary Questions -->
 									<p>Despite these advances, the number of opioid related deaths has not declined <a href="#reference3">[3]</a>. To tackle this issue, <a href='https://www.linkedin.com/in/allisonryoung/'>Allison Young</a> and I partnered with <a href='https://www.rti.org/centers/rti-center-data-science'>RTI International</a> to answer three questions:</p>
@@ -50,12 +50,12 @@
 									<h3>Agent-Based Modeling</h3>
 									<span class="image right" style="max-width: 25%;">
 										<h5>Agent-Based Model Community</h5>
-										<img src="images/capstone-ABM.png" alt="">
+										<img src="../images/capstone-ABM.png" alt="">
 										<figcaption>A screenshot of the Netlogo model representing the social connections between opioid users in the Agent-Based Model. Each agent has social connections with other agents as well as other entities in the community such as pharmacies or physicians. Orange circles represent dealers, yellow circles represent emergency departments, blue triangles represent physicians, and blue squares represent pharmacies. Green agents represent compliant patients and red agents represent noncompliant patients.</figcaption>
 									</span>
 									<span class="image right" style="max-width: 45%;">
 										<h5>Conceptual Model of the Patient Pathway</h5>
-										<img src="images/capstone-flowchart.png" alt="">
+										<img src="../images/capstone-flowchart.png" alt="">
 										<figcaption>A conceptual model of the patient pathway used as inspiration for the ABM. This conceptual model is essentially a Markov chain. A patient can transition between the stages from pain prescription to the use of heroin. At each point of time, an individual can stay in the current state or transition to the next state in the diagram. Each transition occurs with an assigned probability not shown in this diagram. In the ABM, each agent is transitioning through a version of this Markov chain.</figcaption>
 									</span>
 									<p>Agent-based modeling (ABM) has been shown to be an effective approach to examine the effects of opioid interventions. Bobashev et al. <a href="#reference4">[4]</a> used ABM to predict the effects of opioid interventions on opioid and heroin overdoses and deaths over a five-year period. These models simulate the lives of patients prescribed opioids under different proposed policies. The ABM takes input measurements including the number of agents (such as size of population and number of providers and pharmacies), in addition to local measurements of behavior and available resources (such as naloxone availability and the PDMP compliance rate).</p>
@@ -69,9 +69,9 @@
 									<!-- Descriptive -->
 									<h3>Deaths in Durham</h3>
 									<span class="image left" style="max-width: 40%;">
-										<img src="images/capstone-overdose_dists.png" alt="" />
+										<img src="../images/capstone-overdose_dists.png" alt="" />
 										<figcaption>Distribution of Durham drug overdoses from 2004-2014 deaths by race. Opioid deaths primarily affect white individuals.</figcaption>
-										<img src="images/capstone-overdose_map.png" alt="" />
+										<img src="../images/capstone-overdose_map.png" alt="" />
 										<figcaption>Map of all type drug overdose death rates per 1,000 from 2004-2014 in Durham County. Data from NC SCHS. A cluster of deaths appear near the Lakewood and Golden Belt neighborhoods of downtown Durham. Sparsely populated block groups in Durham are disproportionately high in opioid-related deaths compared to the population of the county. We suspect many of these deaths occur in public areas such as large parks as opposed to residential areas.</figcaption>
 									</span>
 									<p>To understand who is dying from the opioid crisis, we first examined where Durham residents are dying from opioid-related causes. This analysis utilized geocoded death records from 2010 to 2016 made available to us by the NC State Center for Health Statistics (NC SCHS) and RTI. Using the case definitions from the NC Department of Public Health Injury Epidemiology and Surveillance Unit Website, cases of opioid-related deaths were identified and further classified as medication or drug poisoning (encompassing all kinds of drug poisoning), opioid poisoning (encompassing all kinds of opioid poisonings, including heroin), and heroin poisoning. We also used publicly available resources to map interventions available for NC residents including locations of providers offering buprenorphine, needle exchange programs, medication drop boxes, and SAMSHA recognized treatment programs <a href="#reference5">[5, </a><a href="#reference6">6, </a><a href="#reference7">7, </a><a href="#reference8">8] </a>.</p>
@@ -83,7 +83,7 @@
 									<h3>Predicting Households with Opioid Misuse</h3>
 									<span class="image right" style="max-width: 30%;">
 										<h5>Predicted Opioid Misuse Households in Durham, NC</h5>
-										<img src="images/capstone-misuse_map.png" alt="" />
+										<img src="../images/capstone-misuse_map.png" alt="" />
 										<figcaption>Map of predicted opioid misuse residences in Durham County, NC. Predictions generated from RTI’s U.S. Synthetic Household Population and NSDUH 2018. Predictions are largely based on population density.</figcaption>
 									</span>
 									<p>Beyond identifying locations of opioid-related deaths, we attempted to identify hot spots for opioid-misuse residences in Durham County. We utilized synthetic population data and the National Survey of Drug Use and Health (NSDUH) to predict these local opioid-misusing residences.</p>
@@ -98,7 +98,7 @@
 									<hr class="major" />
 									<h2>Question 2: How Can We Model The Lives of A Unique Community of Pain Patients?</h2>
 									<span class="image right" style="max-width: 65%;">
-										<img src="images/capstone-flowchart-day.png" alt="" />
+										<img src="../images/capstone-flowchart-day.png" alt="" />
 										<figcaption>Simplified diagram of Durham pain patient ABM. Each day a patient seeks opioids and either survives or dies.</figcaption>
 									</span>
 									<p>Modeling a community of pain patients is no simple task. Considering the life of just one pain patient involves hundreds of decisions, actions, and outcomes. Incorporating multiple pain patients introduces a tangled web of relationships and interactions. Modeling these communities of pain patients is possible with agent-based models, which effectively simulate the lives of patients prescribed opioids over the course of five years. These models are enormous collections of agents running through identical Markov chains for a fixed period of time.</p>
@@ -114,7 +114,7 @@
 									<p>After gaining as much information as possible from literature, we altered additional ABM features in the interest of consistently simulating Durham County outcomes. After much experimentation, we succeeded in replicating Durham outcomes by updating several model features including increasing the probability of overdose, increasing probability of a bad batch of heroin entering the community, and increasing the additional risk of overdose and death by heroin.</p>
 									<h4>Increased Probability of Overdose</h4>
 									<span class="image right" style="max-width: 35%;">
-										<img src="images/capstone-P(OD).png" alt="" />
+										<img src="../images/capstone-P(OD).png" alt="" />
 										<figcaption>Previous and updated probability of overdosing based on available drug supply. The probability of overdosing after taking opioids was originally calculated based on the patients current supply of opioids and heroin combined. Our findings suggest that this probability should be increased by a factor of approximately 1.7 to better replicate Durham County outcomes.</figcaption>
 									</span>
 									<p>Previously, the probability of overdose was calculated based on the patients current supply of opioids and heroin combined. This calculation was based on previous medical research on opioid doses and overdose rates <a href="#reference14">[14, </a><a href="#reference15">15]</a>. However, our findings suggest that this probability should be increased by a factor of approximately 1.7 to better replicate Durham County outcomes. Although a factor of 1.7 may seem large, even in the most extreme cases an individual’s probability of overdosing on any given day never exceeds 0.00047.</p>
@@ -131,7 +131,7 @@
 									<p>Specifically, <b>we explored the effects of six different interventions</b>: 1) naloxone availability, 2) PDMP compliance, 3) ED initial dosage, 4) buprenorphine treatment chance, 5) average prescribing rate, and 6) average ED prescribing rate. We applied each intervention 50 times to the ABM at five varying degrees. By running so many iterations, our estimates are protected from the effects of any single outlier. <b>We evaluated the effects of these interventions based on five outcome metrics</b> 1) number of opioid overdoses, 2) number of opioid deaths, 3) number of heroin overdoses, 4) number of heroin deaths, 5) number of heroin users.</p>
 									<span class="image left" style="max-width: 60%;">
 										<h5>Predicted Effect of Interventions</h5>
-										<img src="images/capstone-resutls.png" alt="" />
+										<img src="../images/capstone-resutls.png" alt="" />
 										<figcaption>Naloxone availability and emergency department initial dosages had positive effects on the simulated community while all other interventions did not show meaningful effects.</figcaption>
 									</span>
 									<p><b>Our results suggest that naloxone availability and ED initial dose have the largest effect on outcomes</b>. According to our findings, increased naloxone availability was associated with increased overdoses but a decreased death rate, while ED initial dosages over 75 MME was associated with increased heroin overdoses and deaths. </p>
@@ -166,21 +166,6 @@
 											<p>Our findings suggest that increased naloxone availability and ED initial doses below 75 MME are associated with improved outcomes such as decreased overdoses and death rates. However, interventions such as increased buprenorphine availability and average prescribing rates do not meaningful affect outcomes. This is evidence that policies such as the NC STOP Act may not have their intended effect, or that resulting shifts in behavior may still result in negative outcomes.</p>
 										</div>
 									</div>
-
-
-									<!-- 
-									<h4>Who is dying from the opioid crisis?</h4>
-									<p>Opioid overdose deaths affect both rural and urban populations in Durham equally. However, opioid overdose deaths do appear to be most prevalent in middle-aged white men. Initial exploratory data analyses allude to potential hotspots for overdoses in areas with public parks or areas adjacent to recovery communities. Further quantitative and qualitative research is needed to validate this hypothesis.</p>
-									<p>Our results suggest that predicting opioid misuse is far from a simple task. Easily available demographic data alone is not enough to generate accurate opioid misuse predictions; and geographic locations of where drug mortality occurs are not necessarily indicative of where users actually live. Due to this low performance, we were unable to incorporate our predictions into our ABM work. Further research should focus on augmenting demographic data with additional data sources in order to improve accuracy and carry these findings into ABM approaches.</p>
-									
-									<h4>How can we model the lives of a unique community of pain patients?</h4>
-									<p>Using ABM, we successfully modeled the outcomes of pain patients in Durham. This step should not be understated, as it required combining an extensive body of research into a single model, a task that was thought by many health officials to be impossible. Our ABM is a meaningful step in understanding the complex behaviors and relationships involved in the lives of local chronic opioid and heroin users. This is proof of concept that these data can be combined to provide meaningful insight, with the understanding that these models are just a starting point, as properly parameterizing them, and ensuring they encompass all major effects, requires significant future work.</p>
-									<p>From our ABM, we found two major takeaways. First, our estimated probability of overdose is much higher than previous research suggests. Second, our model suggests that almost all heroin overdoses are linked to batches of heroin laced with fentanyl. It is unclear whether these are global phenomena that may affect all opioid users, or if these are a Durham-specific finding. Regardless, future research should examine these results through case studies.</p>
-									
-									<h4>What can be done to prevent these deaths?</h4>
-									<p>ABM is an ideal approach for modeling complex relationships. We observed that often when heroin user deaths increase so do the number of heroin users. Results like these may seem obvious, but many modeling approaches do not support these types of findings, making ABM an ideal choice for future research. </p>
-									<p>Our findings suggest that increased naloxone availability and ED initial doses below 75 MME are associated with improved outcomes such as decreased overdoses and death rates. However, interventions such as increased buprenorphine availability and average prescribing rates do not meaningful affect outcomes. This is evidence that policies such as the NC STOP Act may not have their intended effect, or that resulting shifts in behavior may still result in negative outcomes.</p>
-									-->
 									
 									<!-- Limitations -->
 									<h2>Limitations</h2>
@@ -246,14 +231,14 @@
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="index.html">About Me</a></li>
+										<li><a href="../index.html">About Me</a></li>
 										<li>
 											<span class="opener">Recent Projects</span>
 											<ul>
-												<li><a href="capstone.html">An Agent-Based Modeling Approach to Addressing the Opioid Crisis</a></li>
+												<li><a href="capstone-short.html">An Agent-Based Modeling Approach to Addressing the Opioid Crisis</a></li>
 												<li><a href='ethics.html'>An Examination of Bias in Criminal Risk-Assessment</a></li>
 												<li><a href='housingtransportation-short.html'>The Influence of Transportation Accessibility on Property Value</a></li>
-												<li><a href="solarPV.html">Detecting Solar Panels From Satellite Imagery</a></li>
+												<li><a href="solarPV-short.html">Detecting Solar Panels From Satellite Imagery</a></li>
 											</ul>
 									</ul>
 								</nav>
@@ -265,12 +250,12 @@
 									</header>
 									<div class="mini-posts">
 										<article>
-											<a href="capstone.html" class="image"><img src="images/capstone-ABM.png" alt="" /></a>
+											<a href="capstone-short.html" class="image"><img src="../images/capstone-ABM.png" alt="" /></a>
 											<p><b>An ABM Approach to Addressing the Opioid Crisis: </b>How can we predict the effects of public health intervention on a unique community of pain patients? </p>
 										</article>
 									</div>
 									<ul class="actions">
-										<li><a href="capstone.html" class="button">More</a></li>
+										<li><a href="capstone-short.html" class="button">More</a></li>
 									</ul>
 								</section>
 
@@ -284,7 +269,7 @@
 										<li class= "icon solid fa-envelope" ><a href="mailto:aberman3525@gmail.com?subject=Hello!">Email Me</a></li>
 										<li class= "icon brands fa-linkedin"><a href="https://www.linkedin.com/in/anna-berman-101/">Connect on LinkedIn</a></li>
 										<li class= "icon brands fa-github"><a href="https://github.com/aberman6">Check out my Github</a></li>
-										<li class= "icon solid fa-download"><a href="AnnaBerman_Resume.pdf">Download my Resume</a></li>
+										<li class= "icon solid fa-download"><a href="../AnnaBerman_Resume.pdf">Download my Resume</a></li>
 									</ul>
 								</section>
 
@@ -294,11 +279,11 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
 
 	</body>
 </html>

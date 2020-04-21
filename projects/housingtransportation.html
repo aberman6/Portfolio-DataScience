@@ -4,7 +4,7 @@
 		<title>Anna Berman</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 
@@ -21,14 +21,14 @@
 									<li><a href="https://www.linkedin.com/in/anna-berman-101/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 									<li><a href="https://github.com/aberman6" class="icon brands fa-github"><span class="label">Github</span></a></li>
 									<li><a href="mailto:aberman3525@gmail.com?subject=Hello!" class="icon regular fa-envelope"><span class="label">Gmail</span></a></li>
-									<li><a href="AnnaBerman_Resume.pdf" class="icon solid fa-download"><span class="label">Resume</span></a></li>								
+									<li><a href="../AnnaBerman_Resume.pdf" class="icon solid fa-download"><span class="label">Resume</span></a></li>								
 								</ul>
 							</header>
 
 							<!-- Content -->
 								<section>
 									<header><h1>The Influence of Transportation Accessibility on Property Value</h1></header>
-									<span class="image left"><img src="images/housing-main.jpg" alt="" /></span>
+									<span class="image left"><img src="../images/housing-main.jpg" alt="" /></span>
 									<p>Location, location, location! Real estate value is determined by numerous factors, but location is often touted as one of the most telling. In dense, urban areas where personal vehicles are less common, property location is intrinsically tied to transportation access. But exactly how influential is transportation accessibility in real estate value?</p>
 									<p>To answer this question, we explore the effects of transportation access on housing prices in New York City using subway, bike share, taxi and Uber data. A random forest approach identified highly influential features in predicting real estate price, including proximity to subway and bike share stations.</p>
 									<p>Contributors to this project include <a href='https://www.linkedin.com/in/viggy-kumaresan/'>Viggy Kumaresan</a>, <a href='https://www.linkedin.com/in/azucenamv/?locale=en_US'>Azucena Morales</a>, <a href='https://www.linkedin.com/in/yifei-wang-0249b5170/'>Yifei Wang</a>, and <a href='https://www.linkedin.com/in/zhaosicong/'>Sicong Zhao</a>.</p>
@@ -49,8 +49,8 @@
 									<!-- Data Sources -->
 									<hr class="major" />
 									<h2>Data Sources</h2>
-									<p>In order to assess the impact of transportation accessibility on housing prices in New York City, New York, we integrate several data sources:</p>
-									<div class="table-wrapper">
+									<p>In order to assess the impact of transportation accessibility on housing prices in New York City, New York, we integrated several data sources:</p>
+									<div class="table-wrapper" style="font-size: 80%;">
 										<table>
 											<thead>
 												<tr>
@@ -101,14 +101,14 @@
 										<div class="col-4 col-12-medium">
 											<h4>Housing Sale Prices in NYC</h4>
 											<span class="image fit">
-												<img src="images/housing-colormap.png" alt="" />
+												<img src="../images/housing-colormap.png" alt="" />
 												<figcaption>High property sales prices, subway, and bike accessibility concentrate in similar areas.</figcaption>
 											</span>
 										</div>
 										<div class="col-4 col-12-medium">
 											<h4>Citi Bike Stations in NYC</h4>
 											<span class="image fit">
-												<img src="images/housing-bikes.png" alt="" />
+												<img src="../images/housing-bikes.png" alt="" />
 												<figcaption>Size of the blue dots represents the number of rides originating from each station. Citi Bikes are only available in lower Manhattan and West Brooklyn. The majority of rides take place in lower Manhattan.</figcaption>
 											</span>
 										</div>
@@ -120,14 +120,14 @@
 										<div class="col-4 col-12-medium">
 											<h4>Taxi Rides in NYC</h4>
 											<span class="image fit">
-												<img src="images/housing-taxi.png" alt="" />
+												<img src="../images/housing-taxi.png" alt="" />
 												<figcaption>Manhattan by far has the highest number of trips compared to any other borough.</figcaption>
 											</span>
 										</div>
 										<div class="col-4 col-12-medium">
 											<h4>Uber Rides in NYC</h4>
 											<span class="image fit">
-												<img src="images/housing-uber.png" alt="" />
+												<img src="../images/housing-uber.png" alt="" />
 												<figcaption> Manhattan has the highest number of Uber pick ups and drop offs followed by Brooklyn and Queens respectively.</figcaption>
 											</span>
 										</div>
@@ -138,9 +138,7 @@
 									<!-- Methods -->
 									<hr class="major" />
 									<h2>Methods</h2>
-									<!--<span class="image left"><img src="images/housing-workflow.png" alt="" /></span> -->
-									
-									<h4>Data Preprossing</h4>
+									<h4>Data Preprocessing</h4>
 									<h5>NYC Property Sales</h5>
 									<p>Linking transportation information to each property in the NYC Property Sales dataset was integral to this research. The first step in creating this connection was geolocating each property with latitude and longitude coordinates using Google Maps API as well as manually entering 0.01% of all rows. This geolocation identifed several outliers located outside of the five NYC boroughs. Properties outside the five boroughs were excluded from analysis.</p>
 									<p>To account for missing data, CART multiple imputation was used to impute property square footage in approximately 31% of observations. The NYC Property Sales data included several nonsensical values, such as properties with sales prices close to $0. These sales involved deed transfers between parties such as parents transferring property ownership to their children. These records were dropped to keep the focus on traditional property sales. Dropping these observations reduced the observations from around 84,000 observations to 56,000. </p>
@@ -164,7 +162,7 @@
 									<h2>Results</h2>
 									<p>For each modeling approach, performance was compared to an identical model without the addition of transportation accessibility. In this way, we are able to quantify the value of transportation features in prediction for each approach. Based on the results from our model comparisons, <strong>a random forest approach produced the most accurate predictions</strong>. Random Forest models are especially useful for interpretation because they produce ranked feature importance scores to indicate which variables were most useful in property price predictions.</p>
 									<h4>Model Accuracy</h4>
-									<div class="table-wrapper">
+									<div class="table-wrapper" style="font-size: 80%;">
 										<table>
 											<col>
 											<colgroup span="2"></colgroup>
@@ -220,7 +218,7 @@
 
 									<span class="image left">
 										<h4>Random Forest Feature Importance</h4>
-										<img src="images/housing-features.png" alt="" />
+										<img src="../images/housing-features.png" alt="" />
 										<figcaption>By including transportation data from subways, bike shares, taxis and Uber, we still see that square footage and year built are the most predictive features in our baseline model. However, we also see that the nearest distance to a bike and subway stations are also important predictors.</figcaption>
 									</span>
 									<p><strong>By including transportation data from subways, bike shares, taxis and Uber to our random forest approach, we explain an additional 5% of the variance in housing prices</strong>. In terms of specific features, we still see that square footage and year built are the most predictive features in our baseline model. However, we also see that the nearest distance to a bike and subway stations are also important predictors.</p>
@@ -230,7 +228,7 @@
                                         <div class="col-4 col-12-medium">
 											<span class="image fit">
 												<h4>Accurate Prediction</h4>
-												<img src="images/housing-accurate.png" alt="" />
+												<img src="../images/housing-accurate.png" alt="" />
 												<figcaption> ​Our random forest model produced very accurate predictions for many properties such as this one in Brooklyn.</figcaption>
 											</span>
 
@@ -238,14 +236,14 @@
                                         <div class="col-4 col-12-medium">
 											<span class="image fit">
 												<h4>Medicore Prediction</h4>
-												<img src="images/housing-medicore.png" alt="" />
+												<img src="../images/housing-medicore.png" alt="" />
 												<figcaption> The random forest model produced relatively accurate predictions for many properties such as these one near Highland Park.</figcaption>
 											</span>
                                         </div>
                                         <div class="col-4 col-12-medium">
                                             <span class="image fit">
 												<h4>Inaccurate Prediction</h4>
-												<img src="images/housing-notaccurate.png" alt="" />
+												<img src="../images/housing-notaccurate.png" alt="" />
 												<figcaption> The random forest model produced less accurate predictions for many properties such as this one in Lower Manhattan.</figcaption>
 											</span>
                                         </div>
@@ -285,14 +283,14 @@
 									<h2>Menu</h2>
 								</header>
 								<ul>
-									<li><a href="index.html">About Me</a></li>
+									<li><a href="../index.html">About Me</a></li>
 									<li>
 										<span class="opener">Recent Projects</span>
 										<ul>
 											<li><a href="capstone-short.html">An Agent-Based Modeling Approach to Addressing the Opioid Crisis</a></li>
 											<li><a href='ethics.html'>An Examination of Bias in Criminal Risk-Assessment</a></li>
 											<li><a href='housingtransportation-short.html'>The Influence of Transportation Accessibility on Property Value</a></li>
-											<li><a href="solarPV.html">Detecting Solar Panels From Satellite Imagery</a></li>
+											<li><a href="solarPV-short.html">Detecting Solar Panels From Satellite Imagery</a></li>
 										</ul>
 								</ul>
 							</nav>
@@ -304,7 +302,7 @@
 								</header>
 								<div class="mini-posts">
 									<article>
-										<a href="capstone-short.html" class="image"><img src="images/capstone-ABM.png" alt="" /></a>
+										<a href="capstone-short.html" class="image"><img src="../images/capstone-ABM.png" alt="" /></a>
 										<p><b>An ABM Approach to Addressing the Opioid Crisis: </b>How can we predict the effects of public health intervention on a unique community of pain patients? </p>
 									</article>
 								</div>
@@ -322,7 +320,7 @@
 								<li class= "icon solid fa-envelope" ><a href="mailto:aberman3525@gmail.com?subject=Hello!">Email Me</a></li>
 								<li class= "icon brands fa-linkedin"><a href="https://www.linkedin.com/in/anna-berman-101/">Connect on LinkedIn</a></li>
 								<li class= "icon brands fa-github"><a href="https://github.com/aberman6">Check out my Github</a></li>
-								<li class= "icon solid fa-download"><a href="AnnaBerman_Resume.pdf">Download my Resume</a></li>
+								<li class= "icon solid fa-download"><a href="../AnnaBerman_Resume.pdf">Download my Resume</a></li>
 							</ul>
 						</section>
 
@@ -332,11 +330,11 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
 
 	</body>
 </html>

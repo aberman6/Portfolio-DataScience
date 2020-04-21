@@ -4,7 +4,7 @@
 		<title>Anna Berman</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 
@@ -21,7 +21,7 @@
 									<li><a href="https://www.linkedin.com/in/anna-berman-101/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 									<li><a href="https://github.com/aberman6" class="icon brands fa-github"><span class="label">Github</span></a></li>
 									<li><a href="mailto:aberman3525@gmail.com?subject=Hello!" class="icon regular fa-envelope"><span class="label">Gmail</span></a></li>
-									<li><a href="AnnaBerman_Resume.pdf" class="icon solid fa-download"><span class="label">Resume</span></a></li>								
+									<li><a href="../AnnaBerman_Resume.pdf" class="icon solid fa-download"><span class="label">Resume</span></a></li>								
 								</ul>
 							</header>
 
@@ -30,12 +30,13 @@
 									<header class="main">
 										<h1>An Examination of Bias in Criminal Risk-Assessment</h1>
 									</header>
-									<span class="image left"><img src="images/ethics-main.jpg" alt="" /></span>
-									<p>Over the last few years, algorithic decision-making has grown rapidly across all domains. It's hard to imagine a domain more high-stakes than the criminal justice system, where a decisions can have lifelong consequences for individuals. Unfortunately, research has shown that these algorithms are biased in their decision-making, specifically on the basis of race. There are three primary issues associated with reducing bias in criminal justice algorithms; 1) identifying, 2) quantifying, 3) and remedying bias. These problems call for transparency, establishment of clear criterion, and constant evaluation. With this process, public officials can proactively and consistently consider bias in any criminal justice algorithm.</p>
 									<p>Contributors to this project include <a href='https://www.linkedin.com/in/viggy-kumaresan/'>Viggy Kumaresan</a>, <a href='https://www.linkedin.com/in/azucenamv/?locale=en_US'>Azucena Morales</a>, <a href='https://www.linkedin.com/in/yifei-wang-0249b5170/'>Yifei Wang</a>, and <a href='https://www.linkedin.com/in/zhaosicong/'>Sicong Zhao</a>.</p>
 									
+									<span class="image left">
+										<img src="../images/ethics-main.jpg" alt="" />
+									</span>
+									
 									<!-- Introducion -->
-									<hr class="major" />
 									<h2>Algorithmic Risk Assessment in the Criminal Justice System</h2>
 									<p>Consider two individuals; both charged with petty crimes. The first is Brisha Borden, an 18-year-old girl with no criminal record who attempted to steal a 6-year old’s bike and razor scooter on her way to pick up her god-sister from school. The second is Vernon Prater, a 41-year-old man previously convicted of multiple attempted and completed arm robberies who has spent five years in jail for his crimes. He attempted to shoplift $86.35 worth of tools from Home Depot. Which of these individuals would you say is more likely to commit a future crime? According to COMPAS, an automatic risk assessment tool used in judicial systems across the country, Borden, who is black, is a high risk, while Prater, who is white, is a low risk <a href="#reference1">[1]</a>.</p>
 									<p>Advocates of machine learning argue that algorithms, unlike humans, have the ability to base decisions entirely on logic and therefore have the power to eliminate human biases from decision-making entirely. However, studies have shown that this is far from reality <a href="#reference2">[2,</a><a href="#reference3"> 3,</a><a href="#reference4"> 4]</a>. Without careful precautions, algorithmic decision-making has been shown to result in inconsistent effects across classes of people. <strong>"If data miners are not careful, the process can result in disproportionately adverse outcomes concentrated within historically disadvantaged groups in ways that look a lot like discrimination"</strong> <a href="#reference4">[4]</a>. Either with or without intention, a steadfast reliance on data for decision-making has the potential to perpetuate human bias.</p>
@@ -45,19 +46,26 @@
 									<!-- Problems -->
 									<hr class="major" />
 									<h2>There are Broadly Three Ethical Issues:</h2>
-									<span class="image fit"><img src="images/ethics-three.png" alt="" /></span>
+									<span class="image fit">
+										<img src="../images/ethics-three.png" alt="" />
+									</span>
+
+									<div class="row">
+										<div class="col-4 col-12-medium">
+											<h3>Identify</h3>
+											<p>For the most part, these algorithms are created by for-profit companies that use proprietary knowledge, and the companies are usually unwilling to share their knowledge in order to preserve their bottom line. Consequently, these algorithms are extremely difficult to judge or assess, and harm is only identifiable after the fact. In the case of the COMPAS algorithm, we know an individual's risk score is based on their criminal history, age, gender as well as other information, such as whether their mother was ever arrested or whether they have trouble paying bills <a href="#reference8">[8]</a>. ProPublica, a nonprofit think tank, found that these factors were causing the algorithm to heavily discriminate against African-Americans, even to the point where African-Americans with no criminal record were being given higher risk scores than whites who did have a criminal record. Their methodology highlights examples of identifying bias in a criminal justice algorithm.</p>
+									 	</div>
+										<div class="col-4 col-12-medium">
+											<h3>Quantify</h3>
+												<p>Integral to the examination of bias in these algorithms	is a method of measurement. How biased is one algorithm	compared to another? Is there a threshold at which we say an algorithm	is not fit for use? Explicit mathematical definitions of fairness must be proposed and vetted before attempting a quantification of bias. In the case of COMPAS, differing definitions of bias contributed to the production of racially biased predictions.</p>
+										</div>
+										<div class="col-4 col-12-medium">
+											<h3>Remedy</h3>
+											<p>Once we have identified and quantified bias in an algorithm, then improvement and/or rectification of the algorithm's recommendations should be made. This is a difficult problem to address, since this often involves addressing past mistakes that were made. In the case of COMPAS and other criminal justice algorithms, these mistakes can cause irreparable damage to people’s lives. In 2016, an inmate in upstate New York was mistakenly denied parole, and in 2017, a man was released from a San Francisco jail based on a miscalculation days before he allegedly committed a murder. These are just two cases of the effects of prediction error and potentially model bias. The predictions of the COMPAS algorithm influence how long individuals stay in jail and the amount of their bail. But effects of COMPAS stretch beyond jail time to how much an individual struggles to find a job carrying a criminal record with them for the rest of their lives.</p>
+											<p>Remediation also involves updating the algorithm to remove any discriminatory effects that are found. This is a difficult task not only because algorithm providers are unwilling to alter their proprietary formulas, but also because there is little guidance on how to do so, even if they were willing. Additionally, these bias adjustments often come at the cost of accuracy, which is the primary metric on which the algorithms are being judged.</p>
+										</div>
+									</div>
 									
-									<h3>Identify: How can we identify bias in algorithms?</h3>
-									<p>For the most part, these algorithms are created by for-profit companies that use proprietary knowledge, and the companies are usually unwilling to share their knowledge in order to preserve their bottom line. Consequently, these algorithms are extremely difficult to judge or assess, and harm is only identifiable after the fact.</p>
-									<p>In the case of the COMPAS algorithm, we know an individual's risk score is based on their criminal history, age, gender as well as other information, such as whether their mother was ever arrested or whether they have trouble paying bills <a href="#reference8">[8]</a>. ProPublica, a nonprofit think tank, found that these factors were causing the algorithm to heavily discriminate against African-Americans, even to the point where African-Americans with no criminal record were being given higher risk scores than whites who did have a criminal record. Their methodology highlights examples of identifying bias in a criminal justice algorithm.</p>
-									 
-									<h3>Quantify: How do we quantify or measure level of bias in our information?</h3>
-									<p>Integral to the examination of bias in these algorithms	is a method of measurement. How biased is one algorithm	compared to another? Is there a threshold at which we say an algorithm	is not fit for use? Explicit mathematical definitions of fairness must be proposed and vetted before attempting a quantification of bias. In the case of COMPAS, differing definitions of bias contributed to the production of racially biased predictions.</p>
-
-									<h3>Remedy: How can we remedy the effect of bias in our model?</h3>
-									<p>Once we have identified and quantified bias in an algorithm, then improvement and/or rectification of the algorithm's recommendations should be made. This is a difficult problem to address, since this often involves addressing past mistakes that were made. In the case of COMPAS and other criminal justice algorithms, these mistakes can cause irreparable damage to people’s lives. In 2016, an inmate in upstate New York was mistakenly denied parole, and in 2017, a man was released from a San Francisco jail based on a miscalculation days before he allegedly committed a murder. These are just two cases of the effects of prediction error and potentially model bias. The predictions of the COMPAS algorithm influence how long individuals stay in jail and the amount of their bail. But effects of COMPAS stretch beyond jail time to how much an individual struggles to find a job carrying a criminal record with them for the rest of their lives.</p>
-									<p>Remediation also involves updating the algorithm to remove any discriminatory effects that are found. This is a difficult task not only because algorithm providers are unwilling to alter their proprietary formulas, but also because there is little guidance on how to do so, even if they were willing. Additionally, these bias adjustments often come at the cost of accuracy, which is the primary metric on which the algorithms are being judged.</p>
-
 									<!-- Solutions -->
 									<hr class="major" />
 									<h2>Solutions Are Never Simple</h2>
@@ -70,8 +78,11 @@
 									<p>Fortunately, governments seem to have taken note of these problems and has begun to focus on improving transparency in predictive ML. In California, state senator Robert Hertzberg has already committed to ensuring transparency of risk assessment tools, which would affect future models like COMPAS. And in 2018, New York City passed the country’s first legislation subjecting algorithms to greater public scrutiny. This legislation, known as the Algorithmic Accountability Bill, establishes a task force to examine how algorithms are used by city agencies <a href="#reference6">[6]</a>. This type of proactive legislation is an enormous step in the right direction and will greatly improve the chances that bias is identified early in the process for algorithms like COMPAS, before individuals are harmed.</p>
 									
 									<h3>Quantify: How do we quantify or measure level of bias in our information?</h3>
-									<p>The problem of assessing an algorithm’s fairness has addressed by much previous research, and there are many methods available to us. I am particularly found of Chouldechova's approach <a href="#reference9">[9]</a> , which defines four aspects of fairness:</p>
-									<span class="image fit"><img src="images/ethics-quantify.png" alt="" /></span>
+									<p>The problem of assessing an algorithm’s fairness has addressed by much previous research, and there are many methods available to us. I am particularly found of Chouldechova's approach <a href="#reference9">[9]</a> , which defines four aspects of fairness as outlined below.</p>
+									<span class="image left" style="max-width: 70%;">
+										<h4>Chouldechova's Four Aspects of Fairness</h4>
+										<img src="../images/ethics-quantify.png" alt=""/>
+									</span>
 									<p>In terms of COMPAS, the heated argument between ProPublica and Equivant results from using different definitions of fairness. The COMPAS model suffered from failing to comply with error rate balance, since it had a high imbalanced false positive and false negative rates between different races. This was the problem that ProPublica argued against; even if the model was able to predict high-risk recidivism between the two groups with the same accuracy, the proportion of those that were misclassified either as high-risk or low-risk was different among groups. COMPAS gave priority to predictive parity, which means that their model is fair at predicting high-risk, but the proportion of misclassification varies between groups. The ramifications for this choice are that black individuals were more likely to be misclassified as high or medium risk than compared to white individuals. In the criminal justice context, predictive parity may have been the wrong fairness metric on which to focus.</p>
 									<p>It is important to be aware of these different categories, because an algorithm can be adjusted to comply with one category but might fail to satisfy another. Since choosing one category over another has serious consequences, a decision must be made about which fairness metric relevant in a specific context. This decision also needs to consider the risks for failing in each category. Rayid Ghani, director of the Center for Data Science and Public Policy, claims that governments need to define the fairness metrics that algorithms should be measured against <a href="#reference10">[10]</a>. In order to enact this plan, government decision-makers must be familiar with these metrics and understand the tradeoff between these categories.</p>
 
@@ -82,6 +93,7 @@
 
 									<hr class="major" />
 									<!-- Conclusion -->
+									<h2>Final Thoughts</h2>
 									<p style="font-size: 120%;"><strong>No one creates or uses an algorithm intending to discriminate. By adding transparency, standardized measurement, and contextual thinking to the decision-making process, we can improve criminal justice algorithms while mitigating the risk of inadvertent discrimination. Instead of solely following model predictions, decision-makers should always remain skeptical of black box algorithms and take multiple perspectives into account. This same mindset applies to algorithm developers as well. The road ahead for this technology is murky and unclear, but with the right principles and guidelines in place, we can create a criminal justice system that is fair for all citizens.</strong></p>
 								
 									<!-- References -->
@@ -114,14 +126,14 @@
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="index.html">About Me</a></li>
+										<li><a href="../index.html">About Me</a></li>
 										<li>
 											<span class="opener">Recent Projects</span>
 											<ul>
 												<li><a href="capstone-short.html">An Agent-Based Modeling Approach to Addressing the Opioid Crisis</a></li>
 												<li><a href='ethics.html'>An Examination of Bias in Criminal Risk-Assessment</a></li>
 												<li><a href='housingtransportation-short.html'>The Influence of Transportation Accessibility on Property Value</a></li>
-												<li><a href="solarPV.html">Detecting Solar Panels From Satellite Imagery</a></li>
+												<li><a href="solarPV-short.html">Detecting Solar Panels From Satellite Imagery</a></li>
 											</ul>
 									</ul>
 								</nav>
@@ -133,7 +145,7 @@
 									</header>
 									<div class="mini-posts">
 										<article>
-											<a href="capstone-short.html" class="image"><img src="images/capstone-ABM.png" alt="" /></a>
+											<a href="capstone-short.html" class="image"><img src="../images/capstone-ABM.png" alt="" /></a>
 											<p><b>An ABM Approach to Addressing the Opioid Crisis: </b>How can we predict the effects of public health intervention on a unique community of pain patients? </p>
 										</article>
 									</div>
@@ -151,7 +163,7 @@
 									<li class= "icon solid fa-envelope" ><a href="mailto:aberman3525@gmail.com?subject=Hello!">Email Me</a></li>
 									<li class= "icon brands fa-linkedin"><a href="https://www.linkedin.com/in/anna-berman-101/">Connect on LinkedIn</a></li>
 									<li class= "icon brands fa-github"><a href="https://github.com/aberman6">Check out my Github</a></li>
-									<li class= "icon solid fa-download"><a href="AnnaBerman_Resume.pdf">Download my Resume</a></li>
+									<li class= "icon solid fa-download"><a href="../AnnaBerman_Resume.pdf">Download my Resume</a></li>
 								</ul>
 							</section>
 
@@ -161,11 +173,11 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
 
 	</body>
 </html>
