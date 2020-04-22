@@ -43,15 +43,16 @@
 										<li>How can we model the lives of a unique community of pain patients?</li>
 										<li>What can be done to prevent these deaths?</li>
 									</ol></b>
-									<p>The ultimate goal of this research is to prevent opioid-related deaths, whether in the state of NC or otherwise. This work provides evidence that disparate data sources can be combined to identify potentially effective interventions tailored to specific communities. Our analysis is a preliminary step in a larger investigation, designed to provide proof of concept for a multi-million dollar grant proposal to look more in-depth into these research questions and approaches. With additional resources, research can continue through RTI International or through the NC Department of Health and Human Services.</p>
-									
-									<!-- ABM -->
-									<h3>Agent-Based Modeling</h3>
-									<span class="image right" style="max-width: 25%;">
+									<span class="image right" style="max-width: 35%;">
 										<h5>Agent-Based Model Community</h5>
 										<img src="../images/capstone-ABM.png" alt="">
 										<figcaption>A screenshot of the Netlogo model representing the social connections between opioid users in the Agent-Based Model. Each agent has social connections with other agents as well as other entities in the community such as pharmacies or physicians. Orange circles represent dealers, yellow circles represent emergency departments, blue triangles represent physicians, and blue squares represent pharmacies. Green agents represent compliant patients and red agents represent noncompliant patients.</figcaption>
 									</span>
+									<p>The ultimate goal of this research is to prevent opioid-related deaths, whether in the state of NC or otherwise. This work provides evidence that disparate data sources can be combined to identify potentially effective interventions tailored to specific communities. Our analysis is a preliminary step in a larger investigation, designed to provide proof of concept for a multi-million dollar grant proposal to look more in-depth into these research questions and approaches. With additional resources, research can continue through RTI International or through the NC Department of Health and Human Services.</p>
+									
+									<!-- ABM -->
+									<h3>Agent-Based Modeling</h3>
+									
 
 									<p>Agent-based modeling (ABM) has been shown to be an effective approach to examine the effects of opioid interventions. These models simulate the lives of patients prescribed opioids under different proposed policies. The ABM takes input measurements including the number of agents (such as size of population and number of providers and pharmacies), in addition to local measurements of behavior and available resources (such as naloxone availability and the PDMP compliance rate).</p>
 									<p>The model itself then simulates the lives of drug users by sending each agent through a series of daily actions, determining the actions they take and paths they follow based on probabilities found in literature and research. Agents are connected to one another through their own social networks, simulating a true community. At the end of the allotted time period (in our case 5-years), the model will summarize outcomes as the number of opioid and heroin overdoses, deaths, and patients who are not following recommended medication prescriptions. Policies are ultimately evaluated based on overdose and mortality rates of prescription opioid users and heroin users, as well as on the number of patients who become non-compliant with their prescription and turn to illicit drug use. This work suggests that ABM can be used to evaluate the effects of various interventions.</p>
@@ -63,16 +64,13 @@
 									<h2>Question 1: Who Dies From the Opioid Crisis?</h2>
 									<!-- Descriptive -->
 									<span class="image left" style="max-width: 40%;">
-										<img src="../images/capstone-overdose_dists.png" alt="" />
-										<figcaption>Distribution of Durham drug overdoses from 2004-2014 deaths by race. Opioid deaths primarily affect white individuals.</figcaption>
 										<img src="../images/capstone-overdose_map.png" alt="" />
-										<figcaption>Map of all type drug overdose death rates per 1,000 from 2004-2014 in Durham County. Data from NC SCHS. A cluster of deaths appear near the Lakewood and Golden Belt neighborhoods of downtown Durham. Sparsely populated block groups in Durham are disproportionately high in opioid-related deaths compared to the population of the county. We suspect many of these deaths occur in public areas such as large parks as opposed to residential areas.</figcaption>
+										<figcaption>Map of all type drug overdose death rates per 1,000 from 2004-2014 in Durham County.</figcaption>
 									</span>
 									<p>To understand who is dying from the opioid crisis, we first examined where Durham residents are dying from opioid-related causes. This analysis utilized geocoded death records from 2010 to 2016 made available to us by the NC State Center for Health Statistics (NC SCHS) and RTI. <a href="#reference5">[5, </a><a href="#reference6">6, </a><a href="#reference7">7, </a><a href="#reference8">8] </a>.</p>
-									<p>A descriptive analysis suggests that Durham rates of opioid and drug overdose deaths mirror trends for the nation as a whole. From 2004-2014, 80% of deaths related to drug overdoses occurred for individuals between the ages of 31 and 60. 63% of opioid overdose deaths were represented by white residents, while 70% of cocaine overdose deaths were represented by African American residents. In both of these cases, the death rates by race are disproportionate to the true Durham population, which was approximately 50% white and 37% African American in 2014 <a href="#reference9">[9]</a></p>
+									<p>A descriptive analysis suggests that Durham rates of opioid and drug overdose deaths mirror trends for the nation as a whole. From 2004-2014, 80% of deaths related to drug overdoses occurred for individuals between the ages of 31 and 60. 63% of opioid overdose deaths were represented by white residents, while the population is only 50% white <a href="#reference9">[9]</a>.</p>
 									<p>From this analysis, we can also see a cluster of deaths near the Lakewood and Golden Belt neighborhoods of downtown Durham. Sparsely populated block groups in Durham are disproportionately high in opioid-related deaths compared to the population of the county. We suspect that many of these deaths occur in public areas such as large parks as opposed to residential areas.</p>
-									<p>This analysis also revealed an unusually high rate of drug overdose deaths in the parking lot of a shopping center off East Lakewood Avenue. Upon further investigation, we discovered this shopping center included a Durham Wellness City location. Durham Wellness City is a community of individuals “embarking on or expanding their recovery” from addiction. This case study is one example of where our work could be strengthened by additional qualitative research.</p>
-								
+									
 									<!-- Question 2: Who Dies From the Opioid Crisis -->
 									<hr class="major" />
 									<h2>Question 2: How Can We Model The Lives of A Unique Community of Pain Patients?</h2>
@@ -84,7 +82,7 @@
 									<p>Modeling a community of pain patients is no simple task. Considering the life of just one pain patient involves hundreds of decisions, actions, and outcomes. Incorporating multiple pain patients introduces a tangled web of relationships and interactions. Modeling these communities of pain patients is possible with agent-based models, which effectively simulate the lives of patients prescribed opioids over the course of five years. These models are enormous collections of agents running through identical Markov chains for a fixed period of time.</p>
 									<p>In order to improve upon previous research, much of our work revolved around tailoring an existing general ABM to the demographics, policies and outcomes of Durham County. This tailoring was accomplished through 1) a review of existing literature and 2) calibration to ensure our model accurately predicted local outcomes.</p>
 									<!-- Literature Review -->
-									<p>The first step in tailoring an ABM to Durham County was to conduct a literature review. Results of this review informed the parameters of our ABM. This step proved to be a particularly challenging and time intensive process, as local data is often unavailable. Where possible, parameters reflect that of Durham County specifically. Where we could not find local data, national literature was used. When national data was not available, we relied on client estimates. Finally, where we did not find evidence of deviation from the default, variables were left at their original values.</p>
+									<p>The results of the literature review informed the parameters of our ABM. This step proved to be a particularly challenging and time intensive process, as local data is often unavailable. Where possible, parameters reflect that of Durham County specifically. Where we could not find local data, national literature was used. When national data was not available, we relied on client estimates. Finally, where we did not find evidence of deviation from the default, variables were left at their original values.</p>
                                     <!-- Calibration -->
 									<p>After gaining as much information as possible from literature, we altered additional ABM features in the interest of consistently simulating Durham County outcomes. After much experimentation, we succeeded in replicating Durham outcomes by updating several model features including increasing the probability of overdose, increasing probability of a bad batch of heroin entering the community, and increasing the additional risk of overdose and death by heroin.</p>
 
@@ -124,13 +122,12 @@
 
 									<!-- Limitations -->
 									<h3>Limitations</h3>
-									<h4>Small Numbers</h4>
-									<p>The small population of Durham and consequently low number of opioid-related deaths makes accurate estimates for the model parameters even more important. With fewer agents, small tweaks in the model can result in widely different results. ABM approaches may be better suited for larger populations with higher death rates.</p>
-									<h4>Assumption of Consistency</h4>
-									<p>Inherent to an ABM approach is the assumption that all entities and relationships remain stable. In other words, an ABM simulation of a five-year period assumes that, over the course of the five years,  no additional policies are introduced, all medical facilities remain in operation, and the population remains constant. Moreover, we assume that all individuals share similar decision-making processes, which in reality are impacted greatly by individual life circumstances such as culture, socioeconomic status, and life experience. The assumptions associated with ABM are most likely not reflective of reality and should be examined further in future research.</p>
-									<h4>Limitless Solutions</h4>
-									<p>Perhaps the most significant limitation of our analysis is that of the lack of an optimized solution to any ABM calibration. With so many parameters and relationships to adjust, there are seemingly infinite solutions to Durham County outcome calibration, and ours is only one such solution. Due to this limitation, our findings cannot be considered conclusive evidence, but merely suggest areas or further, more definitive research approaches.</p>
-                                    
+									<ul>
+										<li><strong>Small Numbers:</strong> The small population of Durham and consequently low number of opioid-related deaths makes accurate estimates for the model parameters even more important. With fewer agents, small tweaks in the model can result in widely different results. ABM approaches may be better suited for larger populations with higher death rates.</li>
+										<li><strong>Assumption of Consistency: </strong>Inherent to an ABM approach is the assumption that all entities and relationships remain stable. In other words, an ABM simulation of a five-year period assumes that, over the course of the five years,  no additional policies are introduced, all medical facilities remain in operation, and the population remains constant. Moreover, we assume that all individuals share similar decision-making processes, which in reality are impacted greatly by individual life circumstances such as culture, socioeconomic status, and life experience. The assumptions associated with ABM are most likely not reflective of reality and should be examined further in future research.</li>
+										<li><strong>Limitless Solutions:</strong> Perhaps the most significant limitation of our analysis is that of the lack of an optimized solution to any ABM calibration. With so many parameters and relationships to adjust, there are seemingly infinite solutions to Durham County outcome calibration, and ours is only one such solution. Due to this limitation, our findings cannot be considered conclusive evidence, but merely suggest areas or further, more definitive research approaches.</li>
+									</ul>
+									
                                     <h3>Next Steps</h3>
                                     <p><strong>Many of the limitations of this analysis could be addressed through qualitative interviews or focus groups with any agent that experiences or touches the lives of opioid drugs. Once these limitations have been addressed, we are confident in prescribing this approach to further public health research across Durham County, North Carolina and beyond.</strong></p>
                                     
