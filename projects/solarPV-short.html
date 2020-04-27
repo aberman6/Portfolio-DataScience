@@ -40,7 +40,6 @@
 
 									<!-- Data Sources -->
 									<hr class="major" />
-									<h2>Data Sources</h2>
 									<span class="image right" style="max-width: 60%;">
 										<h5>Images Containing Solar PV</h5>
 										<img src="../images/solarPV-PV.png" alt="" />
@@ -49,18 +48,19 @@
 										<img src="../images/solarPV-PVno.png" alt="" />
 										<figcaption>Surrounding landscape was similar across both images with and without solar PV.</figcaption>
 									</span>
+									<h2>Data Sources</h2>
 									<p>The primary dataset contains 1,500 satellite images in TIFF format, with each image consisting of 101 pixels x 101 pixels and three color channels (Red, Green, Blue). In total, each image is represented as 101 x 101 x 3 array, which is a total of 30,603 numerical entries with values ranging from 0 and 255.</p>
 									<p>Each image in the dataset has been labeled (my humans) as one of two classes, either containing a solar PV, or not containing a solar PV. There are 555 images that contains a solar PV and 995 images without a solar PV, which means that the classes are not entirely balanced. An additional 558 labeled images are housed on Kaggle.com and have an unknown number each image class. These images were used as a test set during the model selection process.</p>
 									
 									<!-- Methods -->
 									<hr class="major" />
 									<h2>Methods</h2>
-									<h4>Data Preprocessing</h4>
 									<span class="image right" style="max-width: 60%;">
 										<h5>Additional Image Features</h5>
 										<img src="../images/solarPV-features.png" alt="" />
 										<figcaption>Example effect of relative luminance and gradient channels. Additional features hopefully help delineate between images with and without solar PV by making the differences between classes more salient.</figcaption>
 									</span>
+									<h4>Data Preprocessing</h4>
 									<p>During the first step of preprocessing, features were added based on on properties we know to be true of solar panels, they absorb light and they are angular in shape. To captures these properties, gradient and luminance features were added to each image. <a href="#reference16">[16]</a></p>
 									<p>During the second step of preprocessing, random modifications were applied to images in order to prevent overfitting including horizontal flips, image shears, and zooms. By increasing the diversity of images in the training set we can ideally to reduce overfit and ultimately increase out-of-sample accuracy. <a href="#reference13"> [13,</a><a href="#reference14"> 14,</a><a href="#reference15"> 15]</a></p>
 

@@ -54,26 +54,26 @@
 									<h3>Agent-Based Modeling</h3>
 									
 
-									<p>Agent-based modeling (ABM) has been shown to be an effective approach to examine the effects of opioid interventions. These models simulate the lives of patients prescribed opioids under different proposed policies. The ABM takes input measurements including the number of agents (such as size of population and number of providers and pharmacies), in addition to local measurements of behavior and available resources (such as naloxone availability and the PDMP compliance rate).</p>
-									<p>The model itself then simulates the lives of drug users by sending each agent through a series of daily actions, determining the actions they take and paths they follow based on probabilities found in literature and research. Agents are connected to one another through their own social networks, simulating a true community. At the end of the allotted time period (in our case 5-years), the model will summarize outcomes as the number of opioid and heroin overdoses, deaths, and patients who are not following recommended medication prescriptions. Policies are ultimately evaluated based on overdose and mortality rates of prescription opioid users and heroin users, as well as on the number of patients who become non-compliant with their prescription and turn to illicit drug use. This work suggests that ABM can be used to evaluate the effects of various interventions.</p>
-									<p>Although previous ABM research has shed significant insights into effective methodologies for investigating the opioid crisis, there are many nuances to consider. Previous ABM research has used generic populations; however every community has unique demographics, policies, and capabilities for care. Without tailoring models to specific populations, insights are often hard to extrapolate. What is found to be true in one community is not likely generalizable to another population.</p>
+									<p>Agent-based modeling (ABM) has been shown to be an effective approach to examine the effects of opioid interventions. These models simulate the lives of patients prescribed opioids under different proposed policies.</p>
+									<p>The ABM takes input measurements including the number of agents (such as size of population and number of providers and pharmacies), in addition to local measurements of behavior and available resources (such as naloxone availability and the PDMP compliance rate). The model itself then simulates the lives of drug users by sending each agent through a series of daily actions, determining the actions they take and paths they follow based on probabilities found in literature and research. Agents are connected to one another through their own social networks, simulating a true community. At the end of the allotted time period (in our case 5-years), the model will summarize outcomes as the number of opioid and heroin overdoses, deaths, and patients who are not following recommended medication prescriptions. Policies are ultimately evaluated based on overdose and mortality rates of prescription opioid users and heroin users, as well as on the number of patients who become non-compliant with their prescription and turn to illicit drug use.</p>
+									<p>Although previous ABM research has shed significant insights into effective methodologies for investigating the opioid crisis, there are many nuances to consider. Previous ABM research has used generic populations; however every community has unique demographics, policies, and capabilities for care. By tailoring our model to a specific population, insights are simple to extrapolate and act on.</p>
 									
 
 									<!-- Question 1: Who Dies From the Opioid Crisis -->
 									<hr class="major" />
-									<h2>Question 1: Who Dies From the Opioid Crisis?</h2>
+									<h2>Question 1: Who Dies from the Opioid Crisis?</h2>
 									<!-- Descriptive -->
 									<span class="image left" style="max-width: 40%;">
 										<img src="../images/capstone-overdose_map.png" alt="" />
 										<figcaption>Map of all type drug overdose death rates per 1,000 from 2004-2014 in Durham County.</figcaption>
 									</span>
-									<p>To understand who is dying from the opioid crisis, we first examined where Durham residents are dying from opioid-related causes. This analysis utilized geocoded death records from 2010 to 2016 made available to us by the NC State Center for Health Statistics (NC SCHS) and RTI. <a href="#reference5">[5, </a><a href="#reference6">6, </a><a href="#reference7">7, </a><a href="#reference8">8] </a>.</p>
+									<p>To understand who is dying from the opioid crisis, we first examined where Durham residents are dying from opioid-related causes. This analysis utilized geocoded death records from 2010 to 2016 made available by the NC State Center for Health Statistics (NC SCHS) and RTI. <a href="#reference5">[5, </a><a href="#reference6">6, </a><a href="#reference7">7, </a><a href="#reference8">8] </a>.</p>
 									<p>A descriptive analysis suggests that Durham rates of opioid and drug overdose deaths mirror trends for the nation as a whole. From 2004-2014, 80% of deaths related to drug overdoses occurred for individuals between the ages of 31 and 60. 63% of opioid overdose deaths were represented by white residents, while the population is only 50% white <a href="#reference9">[9]</a>.</p>
-									<p>From this analysis, we can also see a cluster of deaths near the Lakewood and Golden Belt neighborhoods of downtown Durham. Sparsely populated block groups in Durham are disproportionately high in opioid-related deaths compared to the population of the county. We suspect that many of these deaths occur in public areas such as large parks as opposed to residential areas.</p>
+									<p>From a geographic standpoint, we also see a cluster of deaths near the Lakewood and Golden Belt neighborhoods of downtown Durham. Sparsely populated block groups in Durham are disproportionately high in opioid-related deaths compared to the population of the county. We suspect that many of these deaths occur in public areas such as large parks as opposed to residential areas.</p>
 									
 									<!-- Question 2: Who Dies From the Opioid Crisis -->
 									<hr class="major" />
-									<h2>Question 2: How Can We Model The Lives of A Unique Community of Pain Patients?</h2>
+									<h2>Question 2: How Can We Model the Lives of a Unique Community of Pain Patients?</h2>
 									<span class="image right" style="max-width: 45%;">
 										<h5>Conceptual Model of the Patient Pathway</h5>
 										<img src="../images/capstone-flowchart.png" alt="">
@@ -89,8 +89,8 @@
 									<!-- Question 3: What Can Be Done to Prevent Deaths? -->
 									<hr class="major" />
 									<h2>Question 3: What Can Be Done to Prevent Deaths?</h2>
-									<p>In the final stage of our analysis, we used our calibrated ABM model to simulate the effects of a variety of interventions. As previously described, ABM allows us to simulate the effects of inventions on a specific population. Importantly, ABM applies each intervention in systematic fashion allowing us to predict the effects of each intervention at varying levels. A promising intervention would be one that predicts fewer deaths, overdoses or patients who are non-compliant. </p>
-									<p>Specifically, <b>we explored the effects of six different interventions</b>: 1) naloxone availability, 2) PDMP compliance, 3) Emergency Department (ED) initial dosage, 4) buprenorphine treatment chance, 5) average prescribing rate, and 6) average ED prescribing rate. We applied each intervention 50 times to the ABM at five varying degrees. By running so many iterations, our estimates are protected from the effects of any single outlier. <b>We evaluated the effects of these interventions based on five outcome metrics</b> 1) number of opioid overdoses, 2) number of opioid deaths, 3) number of heroin overdoses, 4) number of heroin deaths, 5) number of heroin users.</p>
+									<p>In the final stage of our analysis, we used our calibrated ABM model to simulate the effects of a variety of interventions. As previously described, ABM allows us to simulate the effects of inventions on a specific population. Importantly, ABM applies each intervention in systematic fashion allowing us to predict the effects of each intervention at varying levels. A promising intervention would be one that predicts fewer deaths, overdoses, or patients who are non-compliant. </p>
+									<p>Specifically, <b>we explored the effects of six different interventions</b>: 1) naloxone availability, 2) PDMP compliance, 3) Emergency Department (ED) initial dosage, 4) buprenorphine treatment chance, 5) average prescribing rate, and 6) average ED prescribing rate. We applied each intervention 50 times at five varying degrees. By running so many iterations, our estimates are protected from the effects of any single outlier. <b>We evaluated the effects of these interventions based on five outcome metrics</b> 1) number of opioid overdoses, 2) number of opioid deaths, 3) number of heroin overdoses, 4) number of heroin deaths, 5) number of heroin users.</p>
 									<span class="image left" style="max-width: 60%;">
 										<h5>Predicted Effect of Interventions</h5>
 										<img src="../images/capstone-resutls.png" alt="" />
@@ -129,7 +129,7 @@
 									</ul>
 									
                                     <h3>Next Steps</h3>
-                                    <p><strong>Many of the limitations of this analysis could be addressed through qualitative interviews or focus groups with any agent that experiences or touches the lives of opioid drugs. Once these limitations have been addressed, we are confident in prescribing this approach to further public health research across Durham County, North Carolina and beyond.</strong></p>
+                                    <p><strong>Many of the limitations of this analysis could be addressed through qualitative interviews or focus groups with any agent that experiences or touches the lives of opioid drugs. Once these limitations have been addressed, we are confident in prescribing this approach to further public health research across Durham County, North Carolina, and elsewhere.</strong></p>
                                     
                                     <a href="capstone.html" class="button primary big">Want to see more? Read the Full Report Here</a>
 
