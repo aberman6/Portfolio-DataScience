@@ -28,13 +28,13 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>An Agent-Based Modeling Approach to Addressing the Opioid Crisis</h1>
+										<h1>An Agent-Based Modeling Approach To Addressing the Opioid Crisis</h1>
 									</header>
                                     <p>Contributors to this project include <a href='https://www.linkedin.com/in/allisonryoung/'>Allison Young</a>, <a href='https://www.rti.org/expert/georgiy-bobashev'>Georgiy Bobashev</a>, and <a href='https://www.rti.org/expert/james-rineer'>Jay Rineer</a>.</p>
                                     <a href="https://github.com/aberman6/dukeMIDS-RTI-Capstone-2020" download class="button big">Check out the Github repo</a>
 									<hr class="major" />
 									<!-- Research Purpose & Background -->
-									<h2>The Opioid Crisis is a National and a Local Issue</h2>
+									<h2>The Opioid Crisis Is A National And A Local Issue</h2>
 									<p>Every day, more than 130 US adults die from opioid overdoses. Opioid misuse has become a national public health crisis affecting individuals across the country and in our own backyards <a href="#reference1">[1]</a>. In the last 20 years, the number of medication and drug poisoning deaths in North Carolina has increased nearly six-fold, from about 400 deaths in 1999 to more than 2,400 in 2017. North Carolina has taken steps to prevent these deaths, most significantly through the 2017 North Carolina Opioid Action Plan, which focuses on prevention of opioid misuse, reduction of harm, and expansion of connections to care. Just two years after the Action Plan’s launch, opioid dispensing has decreased by 24%, prescriptions for drugs used to treat opioid use disorders has increased by 15%, and opioid use disorder treatment for uninsured and Medicaid beneficiaries has increased by 20% <a href="#reference2">[2]</a>.</p>
 									<!-- Primary Questions -->
 									<p>Despite these advances, the number of opioid related deaths has not declined <a href="#reference3">[3]</a>. To tackle this issue, <a href='https://www.linkedin.com/in/allisonryoung/'>Allison Young</a> and I partnered with <a href='https://www.rti.org/centers/rti-center-data-science'>RTI International</a> to answer three questions:</p>
@@ -52,8 +52,6 @@
 									
 									<!-- ABM -->
 									<h3>Agent-Based Modeling</h3>
-									
-
 									<p>Agent-based modeling (ABM) has been shown to be an effective approach to examine the effects of opioid interventions. These models simulate the lives of patients prescribed opioids under different proposed policies.</p>
 									<p>The ABM takes input measurements including the number of agents (such as size of population and number of providers and pharmacies), in addition to local measurements of behavior and available resources (such as naloxone availability and the PDMP compliance rate). The model itself then simulates the lives of drug users by sending each agent through a series of daily actions, determining the actions they take and paths they follow based on probabilities found in literature and research. Agents are connected to one another through their own social networks, simulating a true community. At the end of the allotted time period (in our case 5-years), the model will summarize outcomes as the number of opioid and heroin overdoses, deaths, and patients who are not following recommended medication prescriptions. Policies are ultimately evaluated based on overdose and mortality rates of prescription opioid users and heroin users, as well as on the number of patients who become non-compliant with their prescription and turn to illicit drug use.</p>
 									<p>Although previous ABM research has shed significant insights into effective methodologies for investigating the opioid crisis, there are many nuances to consider. Previous ABM research has used generic populations; however every community has unique demographics, policies, and capabilities for care. By tailoring our model to a specific population, insights are simple to extrapolate and act on.</p>
@@ -61,7 +59,7 @@
 
 									<!-- Question 1: Who Dies From the Opioid Crisis -->
 									<hr class="major" />
-									<h2>Question 1: Who Dies from the Opioid Crisis?</h2>
+									<h2>Question 1: Who Dies From The Opioid Crisis?</h2>
 									<!-- Descriptive -->
 									<span class="image left" style="max-width: 40%;">
 										<img src="../images/capstone-overdose_map.png" alt="" />
@@ -73,7 +71,7 @@
 									
 									<!-- Question 2: Who Dies From the Opioid Crisis -->
 									<hr class="major" />
-									<h2>Question 2: How Can We Model the Lives of a Unique Community of Pain Patients?</h2>
+									<h2>Question 2: How Can We Model The Lives Of A Unique Community Of Pain Patients?</h2>
 									<span class="image right" style="max-width: 45%;">
 										<h5>Conceptual Model of the Patient Pathway</h5>
 										<img src="../images/capstone-flowchart.png" alt="">
@@ -88,7 +86,7 @@
 
 									<!-- Question 3: What Can Be Done to Prevent Deaths? -->
 									<hr class="major" />
-									<h2>Question 3: What Can Be Done to Prevent Deaths?</h2>
+									<h2>Question 3: What Can Be Done To Prevent Deaths?</h2>
 									<p>In the final stage of our analysis, we used our calibrated ABM model to simulate the effects of a variety of interventions. As previously described, ABM allows us to simulate the effects of inventions on a specific population. Importantly, ABM applies each intervention in systematic fashion allowing us to predict the effects of each intervention at varying levels. A promising intervention would be one that predicts fewer deaths, overdoses, or patients who are non-compliant. </p>
 									<p>Specifically, <b>we explored the effects of six different interventions</b>: 1) naloxone availability, 2) PDMP compliance, 3) Emergency Department (ED) initial dosage, 4) buprenorphine treatment chance, 5) average prescribing rate, and 6) average ED prescribing rate. We applied each intervention 50 times at five varying degrees. By running so many iterations, our estimates are protected from the effects of any single outlier. <b>We evaluated the effects of these interventions based on five outcome metrics</b> 1) number of opioid overdoses, 2) number of opioid deaths, 3) number of heroin overdoses, 4) number of heroin deaths, 5) number of heroin users.</p>
 									<span class="image left" style="max-width: 60%;">

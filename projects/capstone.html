@@ -28,14 +28,14 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>An Agent-Based Modeling Approach to Addressing the Opioid Crisis</h1>
+										<h1>An Agent-Based Modeling Approach To Addressing The Opioid Crisis</h1>
 									</header>
 									<p>With Agent-Based Modeling (ABM), we can predict outcomes for local communities of pain patients. This is an exciting proof of concept suggesting that a similar approach can be applied to other communities to model local health outcomes. An ABM tailored to the Durham, NC pain patient community suggests that increased naloxone availability and decreased emergency department dosages are associated with improved outcomes. Our findings also suggest that interventions such as increased buprenorphine availability and decreased prescribing rates do not meaningful affect outcomes. This is evidence that recent policies may not have their intended effect.</p>
 									<p>Contributors to this project include <a href='https://www.linkedin.com/in/allisonryoung/'>Allison Young</a>, <a href='https://www.rti.org/expert/georgiy-bobashev'>Georgiy Bobashev</a>, and <a href='https://www.rti.org/expert/james-rineer'>Jay Rineer</a>.</p>
 									<a href="https://github.com/aberman6/dukeMIDS-RTI-Capstone-2020" download class="button big">Check out the Github repo</a>
 									<hr class="major" />
 									<!-- Research Purpose & Background -->
-									<h2>The Opioid Crisis is a National and a Local Issue</h2>
+									<h2>The Opioid Crisis Is A National And A Local Issue</h2>
 									<p>Every day, more than 130 US adults die from opioid overdoses. Opioid misuse has become a national public health crisis affecting individuals across the country and in our own backyards <a href="#reference1">[1]</a>. In the last 20 years, the number of medication and drug poisoning deaths in North Carolina has increased nearly six-fold, from about 400 deaths in 1999 to more than 2,400 in 2017. North Carolina has taken steps to prevent these deaths, most significantly through the 2017 North Carolina Opioid Action Plan, which focuses on prevention of opioid misuse, reduction of harm, and expansion of connections to care. Just two years after the Action Plan’s launch, opioid dispensing has decreased by 24%, prescriptions for drugs used to treat opioid use disorders has increased by 15%, and opioid use disorder treatment for uninsured and Medicaid beneficiaries has increased by 20% <a href="#reference2">[2]</a>.</p>
 									<!-- Primary Questions -->
 									<p>Despite these advances, the number of opioid related deaths has not declined <a href="#reference3">[3]</a>. To tackle this issue, <a href='https://www.linkedin.com/in/allisonryoung/'>Allison Young</a> and I partnered with <a href='https://www.rti.org/centers/rti-center-data-science'>RTI International</a> to answer three questions:</p>
@@ -54,7 +54,7 @@
 										<figcaption>A screenshot of the Netlogo model representing the social connections between opioid users in the Agent-Based Model. Each agent has social connections with other agents as well as other entities in the community such as pharmacies or physicians. Orange circles represent dealers, yellow circles represent emergency departments, blue triangles represent physicians, and blue squares represent pharmacies. Green agents represent compliant patients and red agents represent noncompliant patients.</figcaption>
 									</span>
 									<span class="image right" style="max-width: 45%;">
-										<h5>Conceptual Model of the Patient Pathway</h5>
+										<h5>Conceptual Model Of The Patient Pathway</h5>
 										<img src="../images/capstone-flowchart.png" alt="">
 										<figcaption>A conceptual model of the patient pathway used as inspiration for the ABM. This conceptual model is essentially a Markov chain. A patient can transition between the stages from pain prescription to the use of heroin. At each point of time, an individual can stay in the current state or transition to the next state in the diagram. Each transition occurs with an assigned probability not shown in this diagram. In the ABM, each agent is transitioning through a version of this Markov chain.</figcaption>
 									</span>
@@ -65,7 +65,7 @@
 
 									<!-- Question 1: Who Dies From the Opioid Crisis -->
 									<hr class="major" />
-									<h2>Question 1: Who Dies from the Opioid Crisis?</h2>
+									<h2>Question 1: Who Dies From The Opioid Crisis?</h2>
 									<!-- Descriptive -->
 									<h3>Deaths in Durham</h3>
 									<span class="image left" style="max-width: 40%;">
@@ -80,9 +80,9 @@
 									<p>An interesting finding from the initial data analysis revealed an unusually high rate of drug overdose deaths in the parking lot of a shopping center off East Lakewood Avenue. Upon further investigation, we discovered this shopping center included a Durham Wellness City location. Durham Wellness City is a community of individuals “embarking on or expanding their recovery” from addiction. This case study is one example of where our work could be strengthened by additional qualitative research.</p>
 									
 									<!-- Predictive -->	
-									<h3>Predicting Households with Opioid Misuse</h3>
+									<h3>Predicting Households With Opioid Misuse</h3>
 									<span class="image right" style="max-width: 30%;">
-										<h5>Predicted Opioid Misuse Households in Durham, NC</h5>
+										<h5>Predicted Opioid Misuse Households In Durham, NC</h5>
 										<img src="../images/capstone-misuse_map.png" alt="" />
 										<figcaption>Map of predicted opioid misuse residences in Durham County, NC. Predictions generated from RTI’s U.S. Synthetic Household Population and NSDUH 2018. Predictions are largely based on population density.</figcaption>
 									</span>
@@ -95,7 +95,7 @@
 								
 									<!-- Question 2: Who Dies From the Opioid Crisis -->
 									<hr class="major" />
-									<h2>Question 2: How Can We Model the Lives of a Unique Community of Pain Patients?</h2>
+									<h2>Question 2: How Can We Model The Lives Of A Unique Community Of Pain Patients?</h2>
 									<span class="image right" style="max-width: 65%;">
 										<img src="../images/capstone-flowchart-day.png" alt="" />
 										<figcaption>Simplified diagram of Durham pain patient ABM. Each day a patient seeks opioids and either survives or dies.</figcaption>
@@ -109,27 +109,27 @@
 									<h3>Additional Variables</h3>
 									<p>Beyond updating the current variables, we also included two new variables relating to buprenorphine medication: buprenorphine treatment chance and buprenorphine effectiveness. Buprenorphine is a treatment for opioid addiction that diminishes the effects of physical dependence to opioids, such as withdrawal symptoms and cravings <a href="#reference12">[12]</a>. Buprenorphine can be used in isolation or along with other treatments such as naltrexone. For those that adhere to buprenorphine treatment, 30% did not relapse after the first year of treatment <a href="#reference13">[13]</a>. </p>
 									<!-- Calibration -->
-									<h3>Calibration to Local Outcomes</h3>
+									<h3>Calibration To Local Outcomes</h3>
 									<p>After gaining as much information as possible from literature, we altered additional ABM features in the interest of consistently simulating Durham County outcomes. After much experimentation, we succeeded in replicating Durham outcomes by updating several model features including increasing the probability of overdose, increasing probability of a bad batch of heroin entering the community, and increasing the additional risk of overdose and death by heroin.</p>
-									<h4>Increased Probability of Overdose</h4>
+									<h4>Increased Probability Of Overdose</h4>
 									<span class="image right" style="max-width: 35%;">
 										<img src="../images/capstone-P(OD).png" alt="" />
 										<figcaption>Previous and updated probability of overdosing based on available drug supply. The probability of overdosing after taking opioids was originally calculated based on the patients current supply of opioids and heroin combined. Our findings suggest that this probability should be increased by a factor of approximately 1.7 to better replicate Durham County outcomes.</figcaption>
 									</span>
 									<p>The probability of overdose is calculated based on the patients current supply of opioids and heroin combined. This calculation is based on previous medical research on opioid doses and overdose rates <a href="#reference14">[14, </a><a href="#reference15">15]</a>. However, our findings suggest that this probability should be increased by a factor of approximately 1.7 to better replicate Durham County outcomes. Although a factor of 1.7 may seem large, even in the most extreme cases an individual’s probability of overdosing on any given day never exceeds 0.00047.</p>
 									<p>There are many potential explanations for this increased probability of overdose. An unlikely explanation being that the population of Durham has a heightened probability of overdose compared to the general population due to biological factors. A more likely explanation being that local community structure has led to the increased probability. Perhaps Durham suffers from a lack of communication about the risks of high dosage opioid and heroin dosages. Yet another explanation involves imperfections in the original research’s generalizability. The studies on which the original formula was based come from medical research examining the effect of varying prescribed opioid dosages. It may be the case that results of this research cannot be extrapolated to noncompliant opioid users. None of these hypotheses are supported or contradicted by our work. Further research should examine explanations for this increased probability of overdose. </p>
-									<h4>Increased Risk with Heroin Usage </h4>
+									<h4>Increased Risk With Heroin Usage </h4>
 									<p>Our experimentation led us to believe that three factors directly impact the number of heroin deaths 1) the probability of overdosing on heroin, 2) the probability of dying after overdosing on heroin, and 3) the probability of a bad batch of heroin entering the community. In regards to the first and second of these factors, our ABM predicts that using heroin increases an individuals’ probability of overdosing and dying by a factor of 2.0 and 3.0 respectively. This is due to our client’s belief that using heroin increases the risk of overdose and death beyond that of using opioids. In regards to the third factor, our ABM consistently predicts that over 99% of deaths from heroin are due to using bad batches of heroin as opposed to taking more than an individual’s tolerance. Because of this relationship, the probability of a bad batch of heroin entering the community has a direct impact on the number of heroin overdoses. These three factors alone almost entirely determine the number of predicted heroin deaths.</p>
 									<p>Unfortunately, we did not find evidence to support any one particular balance of these three factors. Because of this lack of evidence, the current balance between these three factors should be interpreted with caution. These values generate an accurate simulation of Durham County outcomes, but it may very well be the case that another combination of the three values would do the same. Further research should examine the heightened risk of heroin usage over opioid usage as well as the probability of a bad batch of heroin in a community.</p>
 								
 
 									<!-- Question 3: What Can Be Done to Prevent Deaths? -->
 									<hr class="major" />
-									<h2>Question 3: What Can Be Done to Prevent Deaths?</h2>
+									<h2>Question 3: What Can Be Done To Prevent Deaths?</h2>
 									<p>In the final stage of our analysis, we used our calibrated ABM model to simulate the effects of a variety of interventions. As previously described, ABM allows us to simulate the effects of inventions on a specific population. Importantly, ABM applies each intervention in systematic fashion allowing us to predict the effects of each intervention at varying levels. A promising intervention would be one that predicts fewer deaths, overdoses or patients who are non-compliant. </p>
 									<p>Specifically, <b>we explored the effects of six different interventions</b>: 1) naloxone availability, 2) PDMP compliance, 3) ED initial dosage, 4) buprenorphine treatment chance, 5) average prescribing rate, and 6) average ED prescribing rate. We applied each intervention 50 times to the ABM at five varying degrees. By running so many iterations, our estimates are protected from the effects of any single outlier. <b>We evaluated the effects of these interventions based on five outcome metrics</b> 1) number of opioid overdoses, 2) number of opioid deaths, 3) number of heroin overdoses, 4) number of heroin deaths, 5) number of heroin users.</p>
 									<span class="image left" style="max-width: 60%;">
-										<h5>Predicted Effect of Interventions</h5>
+										<h5>Predicted Effect Of Interventions</h5>
 										<img src="../images/capstone-resutls.png" alt="" />
 										<figcaption>Naloxone availability and emergency department initial dosages had positive effects on the simulated community while all other interventions did not show meaningful effects.</figcaption>
 									</span>
@@ -180,13 +180,13 @@
 									<hr class="major" />
 									<!-- Next steps -->
 									<h2>Next Steps</h2>
-									<h4>1) Seek more resources to deepen and replicate this research</h4>
+									<h4>1) Seek More Resources To Deepen And Replicate This Research</h4>
 									<p>Additional computational resources would vastly increase the speed of replication and further exploration of this ABM. Specifically in regards to invention effect estimates, increased simulation sample sizes would increase the accuracy of our predictions. Moreover, additional computational power would facilitate additional combinations of model features not yet explored. This is a relatively simple improvement to make that would lead to potentially enormous gains.</p>
-									<h4>2) Use additional resources to focus next on key informant interviews and focus groups</h4>
+									<h4>2) Focus On Key Informant Interviews And Focus Groups</h4>
 									<p>We recommend further research and exploration into this application of ABM to modeling the lives and transitions of drug users. Many assumptions were made in the process of this project, each of which could be isolated and examined in detail. The resulting model from our work is one of many possible models that could explain the real-life outcomes we see. Qualitative interviews with key informants are the next best step towards identifying true population measures. Interviews should be pursued with any agent that touches or is impacted by this modeled simulation of drug user lives. Therefore, drug users, families impacted by addiction, pharmacists, providers, health educators, addiction peer sponsors, medical examiners, EMS personnel, ED nurses, and other subject matter experts would all provide valuable insight into the underlying mechanisms of the opioid epidemic in Durham, NC.</p>
 									<p>One trend we observed was that although increased naloxone availability may lead to fewer deaths, it may also lead to higher rates of non-compliance and more opioid overdoses. A focus group with a group of drug users could explore topics around Naloxone use, and determine if the phenomenon includes cognitive behavioral components, such as a reduced perceived risk of overdose due to the commonly available Naloxone. Further qualitative research is also recommended to explore the hypothesized 1.7 factor increase in probability for opioid overdoses for the Durham population. These are just some examples of nuanced relationships between predictor variables, and interactions that may not be apparent in current models, but may come to light through interviews.</p>
 									<p>Informational interviews would also provide additional information from professionals who are involved with this crisis in the day to day. For example, interviewing state medical examiners would shed light on overall trends in the circumstances leading to drug overdose deaths, including more specific information on the drugs contributing to death. The State Department of Health and Human Services is well positioned to work with medical examiners, as they are authorized to work with their data. Exploring the extent to which heroin deaths are attributed to fentanyl would determine if the bad batch rates used in our model are in fact the leading cause of more heroin overdose deaths in recent years. </p>
-									<h4>3) Anticipate and incorporate room for shifts in public health trends</h4>
+									<h4>3) Anticipate Shifts In Public Health Trends</h4>
 									<p>As we have seen in our own work and in trends of the past, public health trends shift. As policies and programs are put in place to address one public health concern, another emerges. The opioid crisis is not immune to this phenomenon. Already, the opioid crisis has shifted from predominantly prescription opioid overdose deaths to heroin deaths; and now there is a rise in overdoses due to cocaine overdoses following tighter regulations on opioids. Future work should examine additional drugs, including cocaine, as we see that regulation of one drug often leads to a shift in overdoses to other drugs. A good extension of this work would have the situational awareness to assess and adjust to emerging public health concerns.</p>
 								
 									<!-- References -->
