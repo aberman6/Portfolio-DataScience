@@ -72,15 +72,17 @@
 	// Sidebar.
 		var $sidebar = $('#sidebar'),
 			$sidebar_inner = $sidebar.children('.inner');
+			// Always hide sidebar, no matter browser size
+			$sidebar.addClass('inactive');
 
 		// Inactive by default on <= large.
-			breakpoints.on('<=large', function() {
-				$sidebar.addClass('inactive');
-			});
-
-			breakpoints.on('>large', function() {
-				$sidebar.removeClass('inactive');
-			});
+		//	breakpoints.on('<=large', function() {
+		//		$sidebar.addClass('inactive');
+		//	});
+		//
+		//	breakpoints.on('>large', function() {
+		//		$sidebar.removeClass('inactive');
+		//	});
 
 		// Hack: Workaround for Chrome/Android scrollbar position bug.
 			if (browser.os == 'android'
